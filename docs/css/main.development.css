@@ -1,0 +1,6527 @@
+/*!
+ * 
+ * @license @rakuten-rex/button v1.5.0 2020-07-01
+ * Button/Button.development.css
+ * 
+ * Copyright (c) 2018-present, Rakuten, Inc.
+ * 
+ * This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.
+ */
+.rex-button {
+  --rex-blue-600: #3a6dfa;
+  --rex-blue-700: #134ff3;
+  --rex-blue-800: #053ace;
+  --rex-button-border-radius: 0.25rem;
+  --rex-button-min-width: auto;
+  --rex-button-padding-left-right: 1rem;
+  --rex-button-padding-top-bottom: 0.5rem;
+  --rex-button-theme-active-background: var(--rex-blue-800);
+  --rex-button-theme-active-border: var(--rex-blue-800);
+  --rex-button-theme-active-text: var(--rex-white);
+  --rex-button-theme-background: var(--rex-blue-700);
+  --rex-button-theme-border: var(--rex-blue-700);
+  --rex-button-theme-focus-background: var(--rex-blue-600);
+  --rex-button-theme-focus-border: var(--rex-blue-600);
+  --rex-button-theme-focus-text: var(--rex-white);
+  --rex-button-theme-hover-background: var(--rex-blue-600);
+  --rex-button-theme-hover-border: var(--rex-blue-600);
+  --rex-button-theme-hover-text: var(--rex-white);
+  --rex-button-theme-text: var(--rex-white);
+  --rex-gray-200: #ebebeb;
+  --rex-white: #fff;
+  -moz-appearance: none;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-user-select: none;
+  -ms-touch-action: manipulation;
+  -ms-user-select: none;
+  -webkit-appearance: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  -webkit-user-select: none;
+  background-color: var(--rex-button-theme-background);
+  border: 1px solid var(--rex-button-theme-border);
+  border-radius: var(--rex-button-border-radius);
+  color: var(--rex-button-theme-text);
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1rem;
+  font-weight: inherit;
+  line-height: 1.5;
+  margin: 0;
+  min-width: var(--rex-button-min-width);
+  outline: none;
+  overflow: visible;
+  padding: var(--rex-button-padding-top-bottom)
+    var(--rex-button-padding-left-right) var(--rex-button-padding-top-bottom)
+    var(--rex-button-padding-left-right);
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  touch-action: manipulation;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: auto;
+}
+.rex-button,
+.rex-button:after,
+.rex-button:before {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.rex-button::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+.rex-button:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+.rex-button[role="button"] {
+  cursor: pointer;
+}
+.rex-button:focus {
+  outline: none;
+}
+.rex-button.hover,
+.rex-button:hover {
+  background-color: var(--rex-button-theme-hover-background);
+  border-color: var(--rex-button-theme-hover-border);
+  color: var(--rex-button-theme-hover-text);
+}
+.rex-button.active,
+.rex-button:active {
+  background-color: var(--rex-button-theme-active-background);
+  border-color: var(--rex-button-theme-active-border);
+  color: var(--rex-button-theme-active-text);
+}
+.rex-button.focus,
+.rex-button:focus {
+  background-color: var(--rex-button-theme-focus-background);
+  border-color: var(--rex-button-theme-focus-border);
+  color: var(--rex-button-theme-focus-text);
+}
+
+/*!
+ * 
+ * @license @rakuten-rex/button v1.5.0 2020-07-01
+ * ButtonUi/ButtonUi.development.css
+ * 
+ * Copyright (c) 2018-present, Rakuten, Inc.
+ * 
+ * This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.
+ */
+.rex-button-ui {
+  --rex-blue-600: #3a6dfa;
+  --rex-blue-700: #134ff3;
+  --rex-blue-800: #053ace;
+  --rex-button-border-radius: 0.25rem;
+  --rex-button-min-width: auto;
+  --rex-button-padding-left-right: 1rem;
+  --rex-button-padding-top-bottom: 0.5rem;
+  --rex-button-theme-active-background: var(--rex-blue-800);
+  --rex-button-theme-active-border: var(--rex-blue-800);
+  --rex-button-theme-active-text: var(--rex-white);
+  --rex-button-theme-background: var(--rex-blue-700);
+  --rex-button-theme-border: var(--rex-blue-700);
+  --rex-button-theme-focus-background: var(--rex-blue-600);
+  --rex-button-theme-focus-border: var(--rex-blue-600);
+  --rex-button-theme-focus-text: var(--rex-white);
+  --rex-button-theme-hover-background: var(--rex-blue-600);
+  --rex-button-theme-hover-border: var(--rex-blue-600);
+  --rex-button-theme-hover-text: var(--rex-white);
+  --rex-button-theme-text: var(--rex-white);
+  --rex-gray-200: #ebebeb;
+  --rex-white: #fff;
+  -moz-appearance: none;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-user-select: none;
+  -ms-touch-action: manipulation;
+  -ms-user-select: none;
+  -webkit-appearance: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  -webkit-user-select: none;
+  background-color: var(--rex-button-theme-background);
+  border: 1px solid var(--rex-button-theme-border);
+  border-radius: var(--rex-button-border-radius);
+  color: var(--rex-button-theme-text);
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1rem;
+  font-weight: inherit;
+  line-height: 1.5;
+  margin: 0;
+  min-width: var(--rex-button-min-width);
+  outline: none;
+  overflow: visible;
+  padding: var(--rex-button-padding-top-bottom)
+    var(--rex-button-padding-left-right) var(--rex-button-padding-top-bottom)
+    var(--rex-button-padding-left-right);
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  touch-action: manipulation;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: auto;
+}
+.rex-button-ui,
+.rex-button-ui:after,
+.rex-button-ui:before {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.rex-button-ui::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+.rex-button-ui:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+.rex-button-ui[role="button"] {
+  cursor: pointer;
+}
+.rex-button-ui:focus {
+  outline: none;
+}
+.rex-button-ui.hover,
+.rex-button-ui:hover {
+  background-color: var(--rex-button-theme-hover-background);
+  border-color: var(--rex-button-theme-hover-border);
+  color: var(--rex-button-theme-hover-text);
+}
+.rex-button-ui.active,
+.rex-button-ui:active {
+  background-color: var(--rex-button-theme-active-background);
+  border-color: var(--rex-button-theme-active-border);
+  color: var(--rex-button-theme-active-text);
+}
+.rex-button-ui.focus,
+.rex-button-ui:focus {
+  background-color: var(--rex-button-theme-focus-background);
+  border-color: var(--rex-button-theme-focus-border);
+  color: var(--rex-button-theme-focus-text);
+}
+
+/*!
+ * 
+ * @license @rakuten-rex/button v1.5.0 2020-07-01
+ * LinkButton/LinkButton.development.css
+ * 
+ * Copyright (c) 2018-present, Rakuten, Inc.
+ * 
+ * This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.
+ */
+.rex-button-link {
+  --rex-blue-600: #3a6dfa;
+  --rex-blue-700: #134ff3;
+  --rex-blue-800: #053ace;
+  --rex-button-border-radius: 0.25rem;
+  --rex-button-min-width: auto;
+  --rex-button-padding-left-right: 1rem;
+  --rex-button-padding-top-bottom: 0.5rem;
+  --rex-button-theme-active-background: var(--rex-gray-200);
+  --rex-button-theme-active-border: var(--rex-gray-200);
+  --rex-button-theme-active-text: var(--rex-blue-800);
+  --rex-button-theme-background: transparent;
+  --rex-button-theme-border: transparent;
+  --rex-button-theme-focus-background: transparent;
+  --rex-button-theme-focus-border: transparent;
+  --rex-button-theme-focus-text: var(--rex-blue-600);
+  --rex-button-theme-hover-background: var(--rex-gray-200);
+  --rex-button-theme-hover-border: var(--rex-gray-200);
+  --rex-button-theme-hover-text: var(--rex-blue-600);
+  --rex-button-theme-text: var(--rex-blue-700);
+  --rex-gray-200: #ebebeb;
+  --rex-white: #fff;
+  -moz-appearance: none;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-user-select: none;
+  -ms-touch-action: manipulation;
+  -ms-user-select: none;
+  -webkit-appearance: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  -webkit-user-select: none;
+  background-color: var(--rex-button-theme-background);
+  border: 1px solid var(--rex-button-theme-border);
+  border-radius: var(--rex-button-border-radius);
+  color: var(--rex-button-theme-text);
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1rem;
+  font-weight: inherit;
+  line-height: 1.5;
+  margin: 0;
+  min-width: var(--rex-button-min-width);
+  outline: none;
+  overflow: visible;
+  padding: var(--rex-button-padding-top-bottom)
+    var(--rex-button-padding-left-right) var(--rex-button-padding-top-bottom)
+    var(--rex-button-padding-left-right);
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  touch-action: manipulation;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: auto;
+}
+.rex-button-link,
+.rex-button-link:after,
+.rex-button-link:before {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.rex-button-link::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+.rex-button-link:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+.rex-button-link[role="button"] {
+  cursor: pointer;
+}
+.rex-button-link:focus {
+  outline: none;
+}
+.rex-button-link.hover,
+.rex-button-link:hover {
+  background-color: var(--rex-button-theme-hover-background);
+  border-color: var(--rex-button-theme-hover-border);
+  color: var(--rex-button-theme-hover-text);
+}
+.rex-button-link.active,
+.rex-button-link:active {
+  background-color: var(--rex-button-theme-active-background);
+  border-color: var(--rex-button-theme-active-border);
+  color: var(--rex-button-theme-active-text);
+}
+.rex-button-link.focus,
+.rex-button-link:focus {
+  background-color: var(--rex-button-theme-focus-background);
+  border-color: var(--rex-button-theme-focus-border);
+  color: var(--rex-button-theme-focus-text);
+}
+
+/*!
+ * 
+ * @license @rakuten-rex/button v1.5.0 2020-07-01
+ * OutlineButton/OutlineButton.development.css
+ * 
+ * Copyright (c) 2018-present, Rakuten, Inc.
+ * 
+ * This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.
+ */
+.rex-button-outline {
+  --rex-blue-600: #3a6dfa;
+  --rex-blue-700: #134ff3;
+  --rex-blue-800: #053ace;
+  --rex-button-border-radius: 0.25rem;
+  --rex-button-min-width: auto;
+  --rex-button-padding-left-right: 1rem;
+  --rex-button-padding-top-bottom: 0.5rem;
+  --rex-button-theme-active-background: var(--rex-blue-800);
+  --rex-button-theme-active-border: var(--rex-blue-800);
+  --rex-button-theme-active-text: var(--rex-white);
+  --rex-button-theme-background: var(--rex-white);
+  --rex-button-theme-border: var(--rex-blue-700);
+  --rex-button-theme-focus-background: var(--rex-blue-600);
+  --rex-button-theme-focus-border: var(--rex-blue-600);
+  --rex-button-theme-focus-text: var(--rex-white);
+  --rex-button-theme-hover-background: var(--rex-blue-600);
+  --rex-button-theme-hover-border: var(--rex-blue-600);
+  --rex-button-theme-hover-text: var(--rex-white);
+  --rex-button-theme-text: var(--rex-blue-700);
+  --rex-gray-200: #ebebeb;
+  --rex-white: #fff;
+  -moz-appearance: none;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-user-select: none;
+  -ms-touch-action: manipulation;
+  -ms-user-select: none;
+  -webkit-appearance: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  -webkit-user-select: none;
+  background-color: var(--rex-button-theme-background);
+  border: 1px solid var(--rex-button-theme-border);
+  border-radius: var(--rex-button-border-radius);
+  color: var(--rex-button-theme-text);
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1rem;
+  font-weight: inherit;
+  line-height: 1.5;
+  margin: 0;
+  min-width: var(--rex-button-min-width);
+  outline: none;
+  overflow: visible;
+  padding: var(--rex-button-padding-top-bottom)
+    var(--rex-button-padding-left-right) var(--rex-button-padding-top-bottom)
+    var(--rex-button-padding-left-right);
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  touch-action: manipulation;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: auto;
+}
+.rex-button-outline,
+.rex-button-outline:after,
+.rex-button-outline:before {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.rex-button-outline::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+.rex-button-outline:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+.rex-button-outline[role="button"] {
+  cursor: pointer;
+}
+.rex-button-outline:focus {
+  outline: none;
+}
+.rex-button-outline.hover,
+.rex-button-outline:hover {
+  background-color: var(--rex-button-theme-hover-background);
+  border-color: var(--rex-button-theme-hover-border);
+  color: var(--rex-button-theme-hover-text);
+}
+.rex-button-outline.active,
+.rex-button-outline:active {
+  background-color: var(--rex-button-theme-active-background);
+  border-color: var(--rex-button-theme-active-border);
+  color: var(--rex-button-theme-active-text);
+}
+.rex-button-outline.focus,
+.rex-button-outline:focus {
+  background-color: var(--rex-button-theme-focus-background);
+  border-color: var(--rex-button-theme-focus-border);
+  color: var(--rex-button-theme-focus-text);
+}
+
+/*!
+ * 
+ * @license @rakuten-rex/button v1.5.0 2020-07-01
+ * PillButton/PillButton.development.css
+ * 
+ * Copyright (c) 2018-present, Rakuten, Inc.
+ * 
+ * This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.
+ */
+.rex-button-pill {
+  --rex-blue-600: #3a6dfa;
+  --rex-blue-700: #134ff3;
+  --rex-blue-800: #053ace;
+  --rex-button-border-radius: 2.5rem;
+  --rex-button-min-width: auto;
+  --rex-button-padding-left-right: 1rem;
+  --rex-button-padding-top-bottom: 0.5rem;
+  --rex-button-theme-active-background: var(--rex-blue-800);
+  --rex-button-theme-active-border: var(--rex-blue-800);
+  --rex-button-theme-active-text: var(--rex-white);
+  --rex-button-theme-background: var(--rex-blue-700);
+  --rex-button-theme-border: var(--rex-blue-700);
+  --rex-button-theme-focus-background: var(--rex-blue-600);
+  --rex-button-theme-focus-border: var(--rex-blue-600);
+  --rex-button-theme-focus-text: var(--rex-white);
+  --rex-button-theme-hover-background: var(--rex-blue-600);
+  --rex-button-theme-hover-border: var(--rex-blue-600);
+  --rex-button-theme-hover-text: var(--rex-white);
+  --rex-button-theme-text: var(--rex-white);
+  --rex-gray-200: #ebebeb;
+  --rex-white: #fff;
+  -moz-appearance: none;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-user-select: none;
+  -ms-touch-action: manipulation;
+  -ms-user-select: none;
+  -webkit-appearance: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  -webkit-user-select: none;
+  background-color: var(--rex-button-theme-background);
+  border: 1px solid var(--rex-button-theme-border);
+  border-radius: var(--rex-button-border-radius);
+  color: var(--rex-button-theme-text);
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1rem;
+  font-weight: inherit;
+  line-height: 1.5;
+  margin: 0;
+  min-width: var(--rex-button-min-width);
+  outline: none;
+  overflow: visible;
+  padding: var(--rex-button-padding-top-bottom)
+    var(--rex-button-padding-left-right) var(--rex-button-padding-top-bottom)
+    var(--rex-button-padding-left-right);
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  touch-action: manipulation;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: auto;
+}
+.rex-button-pill,
+.rex-button-pill:after,
+.rex-button-pill:before {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.rex-button-pill::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+.rex-button-pill:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+.rex-button-pill[role="button"] {
+  cursor: pointer;
+}
+.rex-button-pill:focus {
+  outline: none;
+}
+.rex-button-pill.hover,
+.rex-button-pill:hover {
+  background-color: var(--rex-button-theme-hover-background);
+  border-color: var(--rex-button-theme-hover-border);
+  color: var(--rex-button-theme-hover-text);
+}
+.rex-button-pill.active,
+.rex-button-pill:active {
+  background-color: var(--rex-button-theme-active-background);
+  border-color: var(--rex-button-theme-active-border);
+  color: var(--rex-button-theme-active-text);
+}
+.rex-button-pill.focus,
+.rex-button-pill:focus {
+  background-color: var(--rex-button-theme-focus-background);
+  border-color: var(--rex-button-theme-focus-border);
+  color: var(--rex-button-theme-focus-text);
+}
+
+/*!
+ * 
+ * @license @rakuten-rex/button v1.5.0 2020-07-01
+ * PillLinkButton/PillLinkButton.development.css
+ * 
+ * Copyright (c) 2018-present, Rakuten, Inc.
+ * 
+ * This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.
+ */
+.rex-button-link-pill {
+  --rex-blue-600: #3a6dfa;
+  --rex-blue-700: #134ff3;
+  --rex-blue-800: #053ace;
+  --rex-button-border-radius: 2.5rem;
+  --rex-button-min-width: auto;
+  --rex-button-padding-left-right: 1rem;
+  --rex-button-padding-top-bottom: 0.5rem;
+  --rex-button-theme-active-background: var(--rex-gray-200);
+  --rex-button-theme-active-border: var(--rex-gray-200);
+  --rex-button-theme-active-text: var(--rex-blue-800);
+  --rex-button-theme-background: transparent;
+  --rex-button-theme-border: transparent;
+  --rex-button-theme-focus-background: transparent;
+  --rex-button-theme-focus-border: transparent;
+  --rex-button-theme-focus-text: var(--rex-blue-600);
+  --rex-button-theme-hover-background: var(--rex-gray-200);
+  --rex-button-theme-hover-border: var(--rex-gray-200);
+  --rex-button-theme-hover-text: var(--rex-blue-600);
+  --rex-button-theme-text: var(--rex-blue-700);
+  --rex-gray-200: #ebebeb;
+  --rex-white: #fff;
+  -moz-appearance: none;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-user-select: none;
+  -ms-touch-action: manipulation;
+  -ms-user-select: none;
+  -webkit-appearance: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  -webkit-user-select: none;
+  background-color: var(--rex-button-theme-background);
+  border: 1px solid var(--rex-button-theme-border);
+  border-radius: var(--rex-button-border-radius);
+  color: var(--rex-button-theme-text);
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1rem;
+  font-weight: inherit;
+  line-height: 1.5;
+  margin: 0;
+  min-width: var(--rex-button-min-width);
+  outline: none;
+  overflow: visible;
+  padding: var(--rex-button-padding-top-bottom)
+    var(--rex-button-padding-left-right) var(--rex-button-padding-top-bottom)
+    var(--rex-button-padding-left-right);
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  touch-action: manipulation;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: auto;
+}
+.rex-button-link-pill,
+.rex-button-link-pill:after,
+.rex-button-link-pill:before {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.rex-button-link-pill::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+.rex-button-link-pill:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+.rex-button-link-pill[role="button"] {
+  cursor: pointer;
+}
+.rex-button-link-pill:focus {
+  outline: none;
+}
+.rex-button-link-pill.hover,
+.rex-button-link-pill:hover {
+  background-color: var(--rex-button-theme-hover-background);
+  border-color: var(--rex-button-theme-hover-border);
+  color: var(--rex-button-theme-hover-text);
+}
+.rex-button-link-pill.active,
+.rex-button-link-pill:active {
+  background-color: var(--rex-button-theme-active-background);
+  border-color: var(--rex-button-theme-active-border);
+  color: var(--rex-button-theme-active-text);
+}
+.rex-button-link-pill.focus,
+.rex-button-link-pill:focus {
+  background-color: var(--rex-button-theme-focus-background);
+  border-color: var(--rex-button-theme-focus-border);
+  color: var(--rex-button-theme-focus-text);
+}
+
+/*!
+ * 
+ * @license @rakuten-rex/button v1.5.0 2020-07-01
+ * PillOutlineButton/PillOutlineButton.development.css
+ * 
+ * Copyright (c) 2018-present, Rakuten, Inc.
+ * 
+ * This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.
+ */
+.rex-button-pill-outline {
+  --rex-blue-600: #3a6dfa;
+  --rex-blue-700: #134ff3;
+  --rex-blue-800: #053ace;
+  --rex-button-border-radius: 2.5rem;
+  --rex-button-min-width: auto;
+  --rex-button-padding-left-right: 1rem;
+  --rex-button-padding-top-bottom: 0.5rem;
+  --rex-button-theme-active-background: var(--rex-blue-800);
+  --rex-button-theme-active-border: var(--rex-blue-800);
+  --rex-button-theme-active-text: var(--rex-white);
+  --rex-button-theme-background: var(--rex-white);
+  --rex-button-theme-border: var(--rex-blue-700);
+  --rex-button-theme-focus-background: var(--rex-blue-600);
+  --rex-button-theme-focus-border: var(--rex-blue-600);
+  --rex-button-theme-focus-text: var(--rex-white);
+  --rex-button-theme-hover-background: var(--rex-blue-600);
+  --rex-button-theme-hover-border: var(--rex-blue-600);
+  --rex-button-theme-hover-text: var(--rex-white);
+  --rex-button-theme-text: var(--rex-blue-700);
+  --rex-gray-200: #ebebeb;
+  --rex-white: #fff;
+  -moz-appearance: none;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-user-select: none;
+  -ms-touch-action: manipulation;
+  -ms-user-select: none;
+  -webkit-appearance: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  -webkit-user-select: none;
+  background-color: var(--rex-button-theme-background);
+  border: 1px solid var(--rex-button-theme-border);
+  border-radius: var(--rex-button-border-radius);
+  color: var(--rex-button-theme-text);
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1rem;
+  font-weight: inherit;
+  line-height: 1.5;
+  margin: 0;
+  min-width: var(--rex-button-min-width);
+  outline: none;
+  overflow: visible;
+  padding: var(--rex-button-padding-top-bottom)
+    var(--rex-button-padding-left-right) var(--rex-button-padding-top-bottom)
+    var(--rex-button-padding-left-right);
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  touch-action: manipulation;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: auto;
+}
+.rex-button-pill-outline,
+.rex-button-pill-outline:after,
+.rex-button-pill-outline:before {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.rex-button-pill-outline::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+.rex-button-pill-outline:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+.rex-button-pill-outline[role="button"] {
+  cursor: pointer;
+}
+.rex-button-pill-outline:focus {
+  outline: none;
+}
+.rex-button-pill-outline.hover,
+.rex-button-pill-outline:hover {
+  background-color: var(--rex-button-theme-hover-background);
+  border-color: var(--rex-button-theme-hover-border);
+  color: var(--rex-button-theme-hover-text);
+}
+.rex-button-pill-outline.active,
+.rex-button-pill-outline:active {
+  background-color: var(--rex-button-theme-active-background);
+  border-color: var(--rex-button-theme-active-border);
+  color: var(--rex-button-theme-active-text);
+}
+.rex-button-pill-outline.focus,
+.rex-button-pill-outline:focus {
+  background-color: var(--rex-button-theme-focus-background);
+  border-color: var(--rex-button-theme-focus-border);
+  color: var(--rex-button-theme-focus-text);
+}
+
+/*!
+ * 
+ * @license @rakuten-rex/checkbox v1.4.0 2020-07-01
+ * Checkbox/Checkbox.development.css
+ * 
+ * Copyright (c) 2018-present, Rakuten, Inc.
+ * 
+ * This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.
+ */
+.rex-checkbox {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  background-color: inherit;
+  color: #333;
+  display: inline-flex;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: var(--rex-checkbox-margin-top, 0.5rem)
+    var(--rex-checkbox-margin-right, 3rem)
+    var(--rex-checkbox-margin-bottom, 0.5rem) var(--rex-checkbox-margin-left, 0);
+  overflow: visible;
+  padding: 0;
+  text-align: left;
+}
+.rex-checkbox,
+.rex-checkbox:after,
+.rex-checkbox:before {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.rex-checkbox .rex-checkbox-label {
+  color: var(--rex-checkbox-label, #606060);
+}
+.rex-checkbox .rex-checkbox-label:before {
+  background: #fff;
+  border: 2px solid var(--rex-checkbox-border, #606060);
+  border-radius: 4px;
+  box-sizing: border-box;
+  content: "";
+  cursor: pointer;
+  display: inline-block;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+  position: relative;
+  text-align: center;
+  top: 0;
+  transition: all 0.25s ease;
+  vertical-align: top;
+  width: 1.5rem;
+}
+.rex-checkbox + .rex-checkbox-label:empty:before {
+  margin-right: 0;
+}
+.rex-checkbox input[type="checkbox"] {
+  opacity: 1;
+  position: absolute;
+}
+.rex-checkbox input[type="checkbox"]:checked + .rex-checkbox-label {
+  color: var(--rex-checkbox-checked-label, #333);
+}
+.rex-checkbox input[type="checkbox"]:checked + .rex-checkbox-label:before {
+  background-color: var(--rex-checkbox-theme, #1364ff);
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTIwIDdsLS44LS44LTEwIDEwLTQuMy00LjMtLjkuOCA1LjEgNS4xTDIwIDd6IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg==");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-color: var(--rex-checkbox-checked-border, #1364ff);
+}
+.rex-checkbox input[type="checkbox"]:disabled + .rex-checkbox-label {
+  color: var(--rex-checkbox-disabled-label, #898989);
+}
+.rex-checkbox input[type="checkbox"]:disabled + .rex-checkbox-label:before {
+  background: #fff;
+  border-color: var(--rex-checkbox-disabled-border, #dfdfdf);
+}
+.rex-checkbox.rex-form-block {
+  display: flex !important;
+}
+
+/*!
+ * 
+ * @license @rakuten-rex/grid v1.6.0 2020-07-01
+ * Grid/Grid.development.css
+ * 
+ * Copyright (c) 2018-present, Rakuten, Inc.
+ * 
+ * This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.
+ */
+[class^="rex-grid"],
+[class^="rex-grid"]:after,
+[class^="rex-grid"]:before {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.rex-grid-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 290px;
+  overflow: hidden;
+  padding: 0;
+  width: 100%;
+}
+@media (min-width: 375px) {
+  .rex-grid-container {
+    max-width: 345px;
+  }
+}
+@media (min-width: 414px) {
+  .rex-grid-container {
+    max-width: 384px;
+  }
+}
+@media (min-width: 768px) {
+  .rex-grid-container {
+    max-width: 696px;
+  }
+}
+@media (min-width: 1024px) {
+  .rex-grid-container {
+    max-width: 936px;
+  }
+}
+@media (min-width: 1280px) {
+  .rex-grid-container {
+    max-width: 1224px;
+  }
+}
+.rex-grid-container-fluid {
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  padding: 0;
+  width: 100%;
+}
+.rex-grid-no-gutters .rex-grid-row {
+  margin-left: 0;
+  margin-right: 0;
+}
+.rex-grid-no-gutters .rex-grid-row > .rex-grid-col,
+.rex-grid-no-gutters .rex-grid-row > [class*="rex-grid-col-"] {
+  padding-left: 0;
+  padding-right: 0;
+}
+.rex-grid-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -12px;
+  margin-right: -12px;
+}
+.rex-grid-col,
+.rex-grid-col-1,
+.rex-grid-col-2,
+.rex-grid-col-3,
+.rex-grid-col-4,
+.rex-grid-col-5,
+.rex-grid-col-6,
+.rex-grid-col-7,
+.rex-grid-col-8,
+.rex-grid-col-9,
+.rex-grid-col-10,
+.rex-grid-col-11,
+.rex-grid-col-12,
+.rex-grid-col-auto,
+.rex-grid-col-lg,
+.rex-grid-col-lg-1,
+.rex-grid-col-lg-2,
+.rex-grid-col-lg-3,
+.rex-grid-col-lg-4,
+.rex-grid-col-lg-5,
+.rex-grid-col-lg-6,
+.rex-grid-col-lg-7,
+.rex-grid-col-lg-8,
+.rex-grid-col-lg-9,
+.rex-grid-col-lg-10,
+.rex-grid-col-lg-11,
+.rex-grid-col-lg-12,
+.rex-grid-col-lg-auto,
+.rex-grid-col-md,
+.rex-grid-col-md-1,
+.rex-grid-col-md-2,
+.rex-grid-col-md-3,
+.rex-grid-col-md-4,
+.rex-grid-col-md-5,
+.rex-grid-col-md-6,
+.rex-grid-col-md-7,
+.rex-grid-col-md-8,
+.rex-grid-col-md-9,
+.rex-grid-col-md-10,
+.rex-grid-col-md-11,
+.rex-grid-col-md-12,
+.rex-grid-col-md-auto,
+.rex-grid-col-sm,
+.rex-grid-col-sm-1,
+.rex-grid-col-sm-2,
+.rex-grid-col-sm-3,
+.rex-grid-col-sm-4,
+.rex-grid-col-sm-5,
+.rex-grid-col-sm-6,
+.rex-grid-col-sm-7,
+.rex-grid-col-sm-8,
+.rex-grid-col-sm-9,
+.rex-grid-col-sm-10,
+.rex-grid-col-sm-11,
+.rex-grid-col-sm-12,
+.rex-grid-col-sm-auto,
+.rex-grid-col-xl,
+.rex-grid-col-xl-1,
+.rex-grid-col-xl-2,
+.rex-grid-col-xl-3,
+.rex-grid-col-xl-4,
+.rex-grid-col-xl-5,
+.rex-grid-col-xl-6,
+.rex-grid-col-xl-7,
+.rex-grid-col-xl-8,
+.rex-grid-col-xl-9,
+.rex-grid-col-xl-10,
+.rex-grid-col-xl-11,
+.rex-grid-col-xl-12,
+.rex-grid-col-xl-auto,
+.rex-grid-col-xs,
+.rex-grid-col-xs-1,
+.rex-grid-col-xs-2,
+.rex-grid-col-xs-3,
+.rex-grid-col-xs-4,
+.rex-grid-col-xs-5,
+.rex-grid-col-xs-6,
+.rex-grid-col-xs-7,
+.rex-grid-col-xs-8,
+.rex-grid-col-xs-9,
+.rex-grid-col-xs-10,
+.rex-grid-col-xs-11,
+.rex-grid-col-xs-12,
+.rex-grid-col-xs-auto,
+.rex-grid-col-xxl,
+.rex-grid-col-xxl-1,
+.rex-grid-col-xxl-2,
+.rex-grid-col-xxl-3,
+.rex-grid-col-xxl-4,
+.rex-grid-col-xxl-5,
+.rex-grid-col-xxl-6,
+.rex-grid-col-xxl-7,
+.rex-grid-col-xxl-8,
+.rex-grid-col-xxl-9,
+.rex-grid-col-xxl-10,
+.rex-grid-col-xxl-11,
+.rex-grid-col-xxl-12,
+.rex-grid-col-xxl-auto {
+  padding-left: 12px;
+  padding-right: 12px;
+  position: relative;
+  width: 100%;
+}
+.rex-grid-col {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}
+.rex-grid-row-cols-1 > * {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.rex-grid-row-cols-2 > * {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.rex-grid-row-cols-3 > * {
+  flex: 0 0 33.33333%;
+  max-width: 33.33333%;
+}
+.rex-grid-row-cols-4 > * {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+.rex-grid-row-cols-5 > * {
+  flex: 0 0 20%;
+  max-width: 20%;
+}
+.rex-grid-row-cols-6 > * {
+  flex: 0 0 16.66667%;
+  max-width: 16.66667%;
+}
+.rex-grid-col-auto {
+  flex: 0 0 auto;
+  max-width: 100%;
+  width: auto;
+}
+.rex-grid-col-1 {
+  flex: 0 0 8.33333%;
+  max-width: 8.33333%;
+}
+.rex-grid-col-2 {
+  flex: 0 0 16.66667%;
+  max-width: 16.66667%;
+}
+.rex-grid-col-3 {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+.rex-grid-col-4 {
+  flex: 0 0 33.33333%;
+  max-width: 33.33333%;
+}
+.rex-grid-col-5 {
+  flex: 0 0 41.66667%;
+  max-width: 41.66667%;
+}
+.rex-grid-col-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.rex-grid-col-7 {
+  flex: 0 0 58.33333%;
+  max-width: 58.33333%;
+}
+.rex-grid-col-8 {
+  flex: 0 0 66.66667%;
+  max-width: 66.66667%;
+}
+.rex-grid-col-9 {
+  flex: 0 0 75%;
+  max-width: 75%;
+}
+.rex-grid-col-10 {
+  flex: 0 0 83.33333%;
+  max-width: 83.33333%;
+}
+.rex-grid-col-11 {
+  flex: 0 0 91.66667%;
+  max-width: 91.66667%;
+}
+.rex-grid-col-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.rex-grid-order-first {
+  order: -1;
+}
+.rex-grid-order-last {
+  order: 13;
+}
+.rex-grid-order-0 {
+  order: 0;
+}
+.rex-grid-order-1 {
+  order: 1;
+}
+.rex-grid-order-2 {
+  order: 2;
+}
+.rex-grid-order-3 {
+  order: 3;
+}
+.rex-grid-order-4 {
+  order: 4;
+}
+.rex-grid-order-5 {
+  order: 5;
+}
+.rex-grid-order-6 {
+  order: 6;
+}
+.rex-grid-order-7 {
+  order: 7;
+}
+.rex-grid-order-8 {
+  order: 8;
+}
+.rex-grid-order-9 {
+  order: 9;
+}
+.rex-grid-order-10 {
+  order: 10;
+}
+.rex-grid-order-11 {
+  order: 11;
+}
+.rex-grid-order-12 {
+  order: 12;
+}
+.rex-grid-offset-1 {
+  margin-left: 8.33333%;
+}
+.rex-grid-offset-2 {
+  margin-left: 16.66667%;
+}
+.rex-grid-offset-3 {
+  margin-left: 25%;
+}
+.rex-grid-offset-4 {
+  margin-left: 33.33333%;
+}
+.rex-grid-offset-5 {
+  margin-left: 41.66667%;
+}
+.rex-grid-offset-6 {
+  margin-left: 50%;
+}
+.rex-grid-offset-7 {
+  margin-left: 58.33333%;
+}
+.rex-grid-offset-8 {
+  margin-left: 66.66667%;
+}
+.rex-grid-offset-9 {
+  margin-left: 75%;
+}
+.rex-grid-offset-10 {
+  margin-left: 83.33333%;
+}
+.rex-grid-offset-11 {
+  margin-left: 91.66667%;
+}
+@media (min-width: 375px) {
+  .rex-grid-col-xs {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+  .rex-grid-row-cols-xs-1 > * {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .rex-grid-row-cols-xs-2 > * {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .rex-grid-row-cols-xs-3 > * {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
+  .rex-grid-row-cols-xs-4 > * {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .rex-grid-row-cols-xs-5 > * {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+  .rex-grid-row-cols-xs-6 > * {
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%;
+  }
+  .rex-grid-col-xs-auto {
+    flex: 0 0 auto;
+    max-width: 100%;
+    width: auto;
+  }
+  .rex-grid-col-xs-1 {
+    flex: 0 0 8.33333%;
+    max-width: 8.33333%;
+  }
+  .rex-grid-col-xs-2 {
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%;
+  }
+  .rex-grid-col-xs-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .rex-grid-col-xs-4 {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
+  .rex-grid-col-xs-5 {
+    flex: 0 0 41.66667%;
+    max-width: 41.66667%;
+  }
+  .rex-grid-col-xs-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .rex-grid-col-xs-7 {
+    flex: 0 0 58.33333%;
+    max-width: 58.33333%;
+  }
+  .rex-grid-col-xs-8 {
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+  }
+  .rex-grid-col-xs-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+  .rex-grid-col-xs-10 {
+    flex: 0 0 83.33333%;
+    max-width: 83.33333%;
+  }
+  .rex-grid-col-xs-11 {
+    flex: 0 0 91.66667%;
+    max-width: 91.66667%;
+  }
+  .rex-grid-col-xs-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .rex-grid-order-xs-first {
+    order: -1;
+  }
+  .rex-grid-order-xs-last {
+    order: 13;
+  }
+  .rex-grid-order-xs-0 {
+    order: 0;
+  }
+  .rex-grid-order-xs-1 {
+    order: 1;
+  }
+  .rex-grid-order-xs-2 {
+    order: 2;
+  }
+  .rex-grid-order-xs-3 {
+    order: 3;
+  }
+  .rex-grid-order-xs-4 {
+    order: 4;
+  }
+  .rex-grid-order-xs-5 {
+    order: 5;
+  }
+  .rex-grid-order-xs-6 {
+    order: 6;
+  }
+  .rex-grid-order-xs-7 {
+    order: 7;
+  }
+  .rex-grid-order-xs-8 {
+    order: 8;
+  }
+  .rex-grid-order-xs-9 {
+    order: 9;
+  }
+  .rex-grid-order-xs-10 {
+    order: 10;
+  }
+  .rex-grid-order-xs-11 {
+    order: 11;
+  }
+  .rex-grid-order-xs-12 {
+    order: 12;
+  }
+  .rex-grid-offset-xs-0 {
+    margin-left: 0;
+  }
+  .rex-grid-offset-xs-1 {
+    margin-left: 8.33333%;
+  }
+  .rex-grid-offset-xs-2 {
+    margin-left: 16.66667%;
+  }
+  .rex-grid-offset-xs-3 {
+    margin-left: 25%;
+  }
+  .rex-grid-offset-xs-4 {
+    margin-left: 33.33333%;
+  }
+  .rex-grid-offset-xs-5 {
+    margin-left: 41.66667%;
+  }
+  .rex-grid-offset-xs-6 {
+    margin-left: 50%;
+  }
+  .rex-grid-offset-xs-7 {
+    margin-left: 58.33333%;
+  }
+  .rex-grid-offset-xs-8 {
+    margin-left: 66.66667%;
+  }
+  .rex-grid-offset-xs-9 {
+    margin-left: 75%;
+  }
+  .rex-grid-offset-xs-10 {
+    margin-left: 83.33333%;
+  }
+  .rex-grid-offset-xs-11 {
+    margin-left: 91.66667%;
+  }
+}
+@media (min-width: 414px) {
+  .rex-grid-col-sm {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+  .rex-grid-row-cols-sm-1 > * {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .rex-grid-row-cols-sm-2 > * {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .rex-grid-row-cols-sm-3 > * {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
+  .rex-grid-row-cols-sm-4 > * {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .rex-grid-row-cols-sm-5 > * {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+  .rex-grid-row-cols-sm-6 > * {
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%;
+  }
+  .rex-grid-col-sm-auto {
+    flex: 0 0 auto;
+    max-width: 100%;
+    width: auto;
+  }
+  .rex-grid-col-sm-1 {
+    flex: 0 0 8.33333%;
+    max-width: 8.33333%;
+  }
+  .rex-grid-col-sm-2 {
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%;
+  }
+  .rex-grid-col-sm-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .rex-grid-col-sm-4 {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
+  .rex-grid-col-sm-5 {
+    flex: 0 0 41.66667%;
+    max-width: 41.66667%;
+  }
+  .rex-grid-col-sm-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .rex-grid-col-sm-7 {
+    flex: 0 0 58.33333%;
+    max-width: 58.33333%;
+  }
+  .rex-grid-col-sm-8 {
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+  }
+  .rex-grid-col-sm-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+  .rex-grid-col-sm-10 {
+    flex: 0 0 83.33333%;
+    max-width: 83.33333%;
+  }
+  .rex-grid-col-sm-11 {
+    flex: 0 0 91.66667%;
+    max-width: 91.66667%;
+  }
+  .rex-grid-col-sm-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .rex-grid-order-sm-first {
+    order: -1;
+  }
+  .rex-grid-order-sm-last {
+    order: 13;
+  }
+  .rex-grid-order-sm-0 {
+    order: 0;
+  }
+  .rex-grid-order-sm-1 {
+    order: 1;
+  }
+  .rex-grid-order-sm-2 {
+    order: 2;
+  }
+  .rex-grid-order-sm-3 {
+    order: 3;
+  }
+  .rex-grid-order-sm-4 {
+    order: 4;
+  }
+  .rex-grid-order-sm-5 {
+    order: 5;
+  }
+  .rex-grid-order-sm-6 {
+    order: 6;
+  }
+  .rex-grid-order-sm-7 {
+    order: 7;
+  }
+  .rex-grid-order-sm-8 {
+    order: 8;
+  }
+  .rex-grid-order-sm-9 {
+    order: 9;
+  }
+  .rex-grid-order-sm-10 {
+    order: 10;
+  }
+  .rex-grid-order-sm-11 {
+    order: 11;
+  }
+  .rex-grid-order-sm-12 {
+    order: 12;
+  }
+  .rex-grid-offset-sm-0 {
+    margin-left: 0;
+  }
+  .rex-grid-offset-sm-1 {
+    margin-left: 8.33333%;
+  }
+  .rex-grid-offset-sm-2 {
+    margin-left: 16.66667%;
+  }
+  .rex-grid-offset-sm-3 {
+    margin-left: 25%;
+  }
+  .rex-grid-offset-sm-4 {
+    margin-left: 33.33333%;
+  }
+  .rex-grid-offset-sm-5 {
+    margin-left: 41.66667%;
+  }
+  .rex-grid-offset-sm-6 {
+    margin-left: 50%;
+  }
+  .rex-grid-offset-sm-7 {
+    margin-left: 58.33333%;
+  }
+  .rex-grid-offset-sm-8 {
+    margin-left: 66.66667%;
+  }
+  .rex-grid-offset-sm-9 {
+    margin-left: 75%;
+  }
+  .rex-grid-offset-sm-10 {
+    margin-left: 83.33333%;
+  }
+  .rex-grid-offset-sm-11 {
+    margin-left: 91.66667%;
+  }
+}
+@media (min-width: 768px) {
+  .rex-grid-col-md {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+  .rex-grid-row-cols-md-1 > * {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .rex-grid-row-cols-md-2 > * {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .rex-grid-row-cols-md-3 > * {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
+  .rex-grid-row-cols-md-4 > * {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .rex-grid-row-cols-md-5 > * {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+  .rex-grid-row-cols-md-6 > * {
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%;
+  }
+  .rex-grid-col-md-auto {
+    flex: 0 0 auto;
+    max-width: 100%;
+    width: auto;
+  }
+  .rex-grid-col-md-1 {
+    flex: 0 0 8.33333%;
+    max-width: 8.33333%;
+  }
+  .rex-grid-col-md-2 {
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%;
+  }
+  .rex-grid-col-md-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .rex-grid-col-md-4 {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
+  .rex-grid-col-md-5 {
+    flex: 0 0 41.66667%;
+    max-width: 41.66667%;
+  }
+  .rex-grid-col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .rex-grid-col-md-7 {
+    flex: 0 0 58.33333%;
+    max-width: 58.33333%;
+  }
+  .rex-grid-col-md-8 {
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+  }
+  .rex-grid-col-md-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+  .rex-grid-col-md-10 {
+    flex: 0 0 83.33333%;
+    max-width: 83.33333%;
+  }
+  .rex-grid-col-md-11 {
+    flex: 0 0 91.66667%;
+    max-width: 91.66667%;
+  }
+  .rex-grid-col-md-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .rex-grid-order-md-first {
+    order: -1;
+  }
+  .rex-grid-order-md-last {
+    order: 13;
+  }
+  .rex-grid-order-md-0 {
+    order: 0;
+  }
+  .rex-grid-order-md-1 {
+    order: 1;
+  }
+  .rex-grid-order-md-2 {
+    order: 2;
+  }
+  .rex-grid-order-md-3 {
+    order: 3;
+  }
+  .rex-grid-order-md-4 {
+    order: 4;
+  }
+  .rex-grid-order-md-5 {
+    order: 5;
+  }
+  .rex-grid-order-md-6 {
+    order: 6;
+  }
+  .rex-grid-order-md-7 {
+    order: 7;
+  }
+  .rex-grid-order-md-8 {
+    order: 8;
+  }
+  .rex-grid-order-md-9 {
+    order: 9;
+  }
+  .rex-grid-order-md-10 {
+    order: 10;
+  }
+  .rex-grid-order-md-11 {
+    order: 11;
+  }
+  .rex-grid-order-md-12 {
+    order: 12;
+  }
+  .rex-grid-offset-md-0 {
+    margin-left: 0;
+  }
+  .rex-grid-offset-md-1 {
+    margin-left: 8.33333%;
+  }
+  .rex-grid-offset-md-2 {
+    margin-left: 16.66667%;
+  }
+  .rex-grid-offset-md-3 {
+    margin-left: 25%;
+  }
+  .rex-grid-offset-md-4 {
+    margin-left: 33.33333%;
+  }
+  .rex-grid-offset-md-5 {
+    margin-left: 41.66667%;
+  }
+  .rex-grid-offset-md-6 {
+    margin-left: 50%;
+  }
+  .rex-grid-offset-md-7 {
+    margin-left: 58.33333%;
+  }
+  .rex-grid-offset-md-8 {
+    margin-left: 66.66667%;
+  }
+  .rex-grid-offset-md-9 {
+    margin-left: 75%;
+  }
+  .rex-grid-offset-md-10 {
+    margin-left: 83.33333%;
+  }
+  .rex-grid-offset-md-11 {
+    margin-left: 91.66667%;
+  }
+}
+@media (min-width: 1024px) {
+  .rex-grid-col-lg {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+  .rex-grid-row-cols-lg-1 > * {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .rex-grid-row-cols-lg-2 > * {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .rex-grid-row-cols-lg-3 > * {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
+  .rex-grid-row-cols-lg-4 > * {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .rex-grid-row-cols-lg-5 > * {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+  .rex-grid-row-cols-lg-6 > * {
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%;
+  }
+  .rex-grid-col-lg-auto {
+    flex: 0 0 auto;
+    max-width: 100%;
+    width: auto;
+  }
+  .rex-grid-col-lg-1 {
+    flex: 0 0 8.33333%;
+    max-width: 8.33333%;
+  }
+  .rex-grid-col-lg-2 {
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%;
+  }
+  .rex-grid-col-lg-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .rex-grid-col-lg-4 {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
+  .rex-grid-col-lg-5 {
+    flex: 0 0 41.66667%;
+    max-width: 41.66667%;
+  }
+  .rex-grid-col-lg-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .rex-grid-col-lg-7 {
+    flex: 0 0 58.33333%;
+    max-width: 58.33333%;
+  }
+  .rex-grid-col-lg-8 {
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+  }
+  .rex-grid-col-lg-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+  .rex-grid-col-lg-10 {
+    flex: 0 0 83.33333%;
+    max-width: 83.33333%;
+  }
+  .rex-grid-col-lg-11 {
+    flex: 0 0 91.66667%;
+    max-width: 91.66667%;
+  }
+  .rex-grid-col-lg-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .rex-grid-order-lg-first {
+    order: -1;
+  }
+  .rex-grid-order-lg-last {
+    order: 13;
+  }
+  .rex-grid-order-lg-0 {
+    order: 0;
+  }
+  .rex-grid-order-lg-1 {
+    order: 1;
+  }
+  .rex-grid-order-lg-2 {
+    order: 2;
+  }
+  .rex-grid-order-lg-3 {
+    order: 3;
+  }
+  .rex-grid-order-lg-4 {
+    order: 4;
+  }
+  .rex-grid-order-lg-5 {
+    order: 5;
+  }
+  .rex-grid-order-lg-6 {
+    order: 6;
+  }
+  .rex-grid-order-lg-7 {
+    order: 7;
+  }
+  .rex-grid-order-lg-8 {
+    order: 8;
+  }
+  .rex-grid-order-lg-9 {
+    order: 9;
+  }
+  .rex-grid-order-lg-10 {
+    order: 10;
+  }
+  .rex-grid-order-lg-11 {
+    order: 11;
+  }
+  .rex-grid-order-lg-12 {
+    order: 12;
+  }
+  .rex-grid-offset-lg-0 {
+    margin-left: 0;
+  }
+  .rex-grid-offset-lg-1 {
+    margin-left: 8.33333%;
+  }
+  .rex-grid-offset-lg-2 {
+    margin-left: 16.66667%;
+  }
+  .rex-grid-offset-lg-3 {
+    margin-left: 25%;
+  }
+  .rex-grid-offset-lg-4 {
+    margin-left: 33.33333%;
+  }
+  .rex-grid-offset-lg-5 {
+    margin-left: 41.66667%;
+  }
+  .rex-grid-offset-lg-6 {
+    margin-left: 50%;
+  }
+  .rex-grid-offset-lg-7 {
+    margin-left: 58.33333%;
+  }
+  .rex-grid-offset-lg-8 {
+    margin-left: 66.66667%;
+  }
+  .rex-grid-offset-lg-9 {
+    margin-left: 75%;
+  }
+  .rex-grid-offset-lg-10 {
+    margin-left: 83.33333%;
+  }
+  .rex-grid-offset-lg-11 {
+    margin-left: 91.66667%;
+  }
+}
+@media (min-width: 1280px) {
+  .rex-grid-col-xl {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+  .rex-grid-row-cols-xl-1 > * {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .rex-grid-row-cols-xl-2 > * {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .rex-grid-row-cols-xl-3 > * {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
+  .rex-grid-row-cols-xl-4 > * {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .rex-grid-row-cols-xl-5 > * {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+  .rex-grid-row-cols-xl-6 > * {
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%;
+  }
+  .rex-grid-col-xl-auto {
+    flex: 0 0 auto;
+    max-width: 100%;
+    width: auto;
+  }
+  .rex-grid-col-xl-1 {
+    flex: 0 0 8.33333%;
+    max-width: 8.33333%;
+  }
+  .rex-grid-col-xl-2 {
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%;
+  }
+  .rex-grid-col-xl-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .rex-grid-col-xl-4 {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
+  .rex-grid-col-xl-5 {
+    flex: 0 0 41.66667%;
+    max-width: 41.66667%;
+  }
+  .rex-grid-col-xl-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .rex-grid-col-xl-7 {
+    flex: 0 0 58.33333%;
+    max-width: 58.33333%;
+  }
+  .rex-grid-col-xl-8 {
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+  }
+  .rex-grid-col-xl-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+  .rex-grid-col-xl-10 {
+    flex: 0 0 83.33333%;
+    max-width: 83.33333%;
+  }
+  .rex-grid-col-xl-11 {
+    flex: 0 0 91.66667%;
+    max-width: 91.66667%;
+  }
+  .rex-grid-col-xl-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .rex-grid-order-xl-first {
+    order: -1;
+  }
+  .rex-grid-order-xl-last {
+    order: 13;
+  }
+  .rex-grid-order-xl-0 {
+    order: 0;
+  }
+  .rex-grid-order-xl-1 {
+    order: 1;
+  }
+  .rex-grid-order-xl-2 {
+    order: 2;
+  }
+  .rex-grid-order-xl-3 {
+    order: 3;
+  }
+  .rex-grid-order-xl-4 {
+    order: 4;
+  }
+  .rex-grid-order-xl-5 {
+    order: 5;
+  }
+  .rex-grid-order-xl-6 {
+    order: 6;
+  }
+  .rex-grid-order-xl-7 {
+    order: 7;
+  }
+  .rex-grid-order-xl-8 {
+    order: 8;
+  }
+  .rex-grid-order-xl-9 {
+    order: 9;
+  }
+  .rex-grid-order-xl-10 {
+    order: 10;
+  }
+  .rex-grid-order-xl-11 {
+    order: 11;
+  }
+  .rex-grid-order-xl-12 {
+    order: 12;
+  }
+  .rex-grid-offset-xl-0 {
+    margin-left: 0;
+  }
+  .rex-grid-offset-xl-1 {
+    margin-left: 8.33333%;
+  }
+  .rex-grid-offset-xl-2 {
+    margin-left: 16.66667%;
+  }
+  .rex-grid-offset-xl-3 {
+    margin-left: 25%;
+  }
+  .rex-grid-offset-xl-4 {
+    margin-left: 33.33333%;
+  }
+  .rex-grid-offset-xl-5 {
+    margin-left: 41.66667%;
+  }
+  .rex-grid-offset-xl-6 {
+    margin-left: 50%;
+  }
+  .rex-grid-offset-xl-7 {
+    margin-left: 58.33333%;
+  }
+  .rex-grid-offset-xl-8 {
+    margin-left: 66.66667%;
+  }
+  .rex-grid-offset-xl-9 {
+    margin-left: 75%;
+  }
+  .rex-grid-offset-xl-10 {
+    margin-left: 83.33333%;
+  }
+  .rex-grid-offset-xl-11 {
+    margin-left: 91.66667%;
+  }
+}
+@media (min-width: 1440px) {
+  .rex-grid-col-xxl {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+  .rex-grid-row-cols-xxl-1 > * {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .rex-grid-row-cols-xxl-2 > * {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .rex-grid-row-cols-xxl-3 > * {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
+  .rex-grid-row-cols-xxl-4 > * {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .rex-grid-row-cols-xxl-5 > * {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+  .rex-grid-row-cols-xxl-6 > * {
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%;
+  }
+  .rex-grid-col-xxl-auto {
+    flex: 0 0 auto;
+    max-width: 100%;
+    width: auto;
+  }
+  .rex-grid-col-xxl-1 {
+    flex: 0 0 8.33333%;
+    max-width: 8.33333%;
+  }
+  .rex-grid-col-xxl-2 {
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%;
+  }
+  .rex-grid-col-xxl-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .rex-grid-col-xxl-4 {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
+  .rex-grid-col-xxl-5 {
+    flex: 0 0 41.66667%;
+    max-width: 41.66667%;
+  }
+  .rex-grid-col-xxl-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .rex-grid-col-xxl-7 {
+    flex: 0 0 58.33333%;
+    max-width: 58.33333%;
+  }
+  .rex-grid-col-xxl-8 {
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+  }
+  .rex-grid-col-xxl-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+  .rex-grid-col-xxl-10 {
+    flex: 0 0 83.33333%;
+    max-width: 83.33333%;
+  }
+  .rex-grid-col-xxl-11 {
+    flex: 0 0 91.66667%;
+    max-width: 91.66667%;
+  }
+  .rex-grid-col-xxl-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .rex-grid-order-xxl-first {
+    order: -1;
+  }
+  .rex-grid-order-xxl-last {
+    order: 13;
+  }
+  .rex-grid-order-xxl-0 {
+    order: 0;
+  }
+  .rex-grid-order-xxl-1 {
+    order: 1;
+  }
+  .rex-grid-order-xxl-2 {
+    order: 2;
+  }
+  .rex-grid-order-xxl-3 {
+    order: 3;
+  }
+  .rex-grid-order-xxl-4 {
+    order: 4;
+  }
+  .rex-grid-order-xxl-5 {
+    order: 5;
+  }
+  .rex-grid-order-xxl-6 {
+    order: 6;
+  }
+  .rex-grid-order-xxl-7 {
+    order: 7;
+  }
+  .rex-grid-order-xxl-8 {
+    order: 8;
+  }
+  .rex-grid-order-xxl-9 {
+    order: 9;
+  }
+  .rex-grid-order-xxl-10 {
+    order: 10;
+  }
+  .rex-grid-order-xxl-11 {
+    order: 11;
+  }
+  .rex-grid-order-xxl-12 {
+    order: 12;
+  }
+  .rex-grid-offset-xxl-0 {
+    margin-left: 0;
+  }
+  .rex-grid-offset-xxl-1 {
+    margin-left: 8.33333%;
+  }
+  .rex-grid-offset-xxl-2 {
+    margin-left: 16.66667%;
+  }
+  .rex-grid-offset-xxl-3 {
+    margin-left: 25%;
+  }
+  .rex-grid-offset-xxl-4 {
+    margin-left: 33.33333%;
+  }
+  .rex-grid-offset-xxl-5 {
+    margin-left: 41.66667%;
+  }
+  .rex-grid-offset-xxl-6 {
+    margin-left: 50%;
+  }
+  .rex-grid-offset-xxl-7 {
+    margin-left: 58.33333%;
+  }
+  .rex-grid-offset-xxl-8 {
+    margin-left: 66.66667%;
+  }
+  .rex-grid-offset-xxl-9 {
+    margin-left: 75%;
+  }
+  .rex-grid-offset-xxl-10 {
+    margin-left: 83.33333%;
+  }
+  .rex-grid-offset-xxl-11 {
+    margin-left: 91.66667%;
+  }
+}
+.rex-grid-d-none {
+  display: none !important;
+}
+.rex-grid-d-inline {
+  display: inline !important;
+}
+.rex-grid-d-inline-block {
+  display: inline-block !important;
+}
+.rex-grid-d-block {
+  display: block !important;
+}
+.rex-grid-d-table {
+  display: table !important;
+}
+.rex-grid-d-table-row {
+  display: table-row !important;
+}
+.rex-grid-d-table-cell {
+  display: table-cell !important;
+}
+.rex-grid-d-flex {
+  display: flex !important;
+}
+.rex-grid-d-inline-flex {
+  display: inline-flex !important;
+}
+@media (min-width: 375px) {
+  .rex-grid-d-xs-none {
+    display: none !important;
+  }
+  .rex-grid-d-xs-inline {
+    display: inline !important;
+  }
+  .rex-grid-d-xs-inline-block {
+    display: inline-block !important;
+  }
+  .rex-grid-d-xs-block {
+    display: block !important;
+  }
+  .rex-grid-d-xs-table {
+    display: table !important;
+  }
+  .rex-grid-d-xs-table-row {
+    display: table-row !important;
+  }
+  .rex-grid-d-xs-table-cell {
+    display: table-cell !important;
+  }
+  .rex-grid-d-xs-flex {
+    display: flex !important;
+  }
+  .rex-grid-d-xs-inline-flex {
+    display: inline-flex !important;
+  }
+}
+@media (min-width: 414px) {
+  .rex-grid-d-sm-none {
+    display: none !important;
+  }
+  .rex-grid-d-sm-inline {
+    display: inline !important;
+  }
+  .rex-grid-d-sm-inline-block {
+    display: inline-block !important;
+  }
+  .rex-grid-d-sm-block {
+    display: block !important;
+  }
+  .rex-grid-d-sm-table {
+    display: table !important;
+  }
+  .rex-grid-d-sm-table-row {
+    display: table-row !important;
+  }
+  .rex-grid-d-sm-table-cell {
+    display: table-cell !important;
+  }
+  .rex-grid-d-sm-flex {
+    display: flex !important;
+  }
+  .rex-grid-d-sm-inline-flex {
+    display: inline-flex !important;
+  }
+}
+@media (min-width: 768px) {
+  .rex-grid-d-md-none {
+    display: none !important;
+  }
+  .rex-grid-d-md-inline {
+    display: inline !important;
+  }
+  .rex-grid-d-md-inline-block {
+    display: inline-block !important;
+  }
+  .rex-grid-d-md-block {
+    display: block !important;
+  }
+  .rex-grid-d-md-table {
+    display: table !important;
+  }
+  .rex-grid-d-md-table-row {
+    display: table-row !important;
+  }
+  .rex-grid-d-md-table-cell {
+    display: table-cell !important;
+  }
+  .rex-grid-d-md-flex {
+    display: flex !important;
+  }
+  .rex-grid-d-md-inline-flex {
+    display: inline-flex !important;
+  }
+}
+@media (min-width: 1024px) {
+  .rex-grid-d-lg-none {
+    display: none !important;
+  }
+  .rex-grid-d-lg-inline {
+    display: inline !important;
+  }
+  .rex-grid-d-lg-inline-block {
+    display: inline-block !important;
+  }
+  .rex-grid-d-lg-block {
+    display: block !important;
+  }
+  .rex-grid-d-lg-table {
+    display: table !important;
+  }
+  .rex-grid-d-lg-table-row {
+    display: table-row !important;
+  }
+  .rex-grid-d-lg-table-cell {
+    display: table-cell !important;
+  }
+  .rex-grid-d-lg-flex {
+    display: flex !important;
+  }
+  .rex-grid-d-lg-inline-flex {
+    display: inline-flex !important;
+  }
+}
+@media (min-width: 1280px) {
+  .rex-grid-d-xl-none {
+    display: none !important;
+  }
+  .rex-grid-d-xl-inline {
+    display: inline !important;
+  }
+  .rex-grid-d-xl-inline-block {
+    display: inline-block !important;
+  }
+  .rex-grid-d-xl-block {
+    display: block !important;
+  }
+  .rex-grid-d-xl-table {
+    display: table !important;
+  }
+  .rex-grid-d-xl-table-row {
+    display: table-row !important;
+  }
+  .rex-grid-d-xl-table-cell {
+    display: table-cell !important;
+  }
+  .rex-grid-d-xl-flex {
+    display: flex !important;
+  }
+  .rex-grid-d-xl-inline-flex {
+    display: inline-flex !important;
+  }
+}
+@media (min-width: 1440px) {
+  .rex-grid-d-xxl-none {
+    display: none !important;
+  }
+  .rex-grid-d-xxl-inline {
+    display: inline !important;
+  }
+  .rex-grid-d-xxl-inline-block {
+    display: inline-block !important;
+  }
+  .rex-grid-d-xxl-block {
+    display: block !important;
+  }
+  .rex-grid-d-xxl-table {
+    display: table !important;
+  }
+  .rex-grid-d-xxl-table-row {
+    display: table-row !important;
+  }
+  .rex-grid-d-xxl-table-cell {
+    display: table-cell !important;
+  }
+  .rex-grid-d-xxl-flex {
+    display: flex !important;
+  }
+  .rex-grid-d-xxl-inline-flex {
+    display: inline-flex !important;
+  }
+}
+
+/*!
+ * 
+ * @license @rakuten-rex/panel v1.2.0 2020-07-01
+ * Panel/Panel.development.css
+ * 
+ * Copyright (c) 2018-present, Rakuten, Inc.
+ * 
+ * This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.
+ */
+.rex-panel {
+  --rex-panel-background: #fff;
+  --rex-panel-text: inherit;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  background-color: var(--rex-panel-background);
+  border-radius: var(--rex-panel-border-radius, 4px);
+  color: var(--rex-panel-text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 1rem;
+  text-align: left;
+}
+.rex-panel,
+.rex-panel:after,
+.rex-panel:before {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.rex-panel.rex-pt-0 {
+  padding-top: 0;
+}
+.rex-panel.rex-pr-0 {
+  padding-right: 0;
+}
+.rex-panel.rex-pb-0 {
+  padding-bottom: 0;
+}
+.rex-panel.rex-pl-0 {
+  padding-left: 0;
+}
+.rex-panel.rex-px-0 {
+  padding-left: 0;
+  padding-right: 0;
+}
+.rex-panel.rex-py-0 {
+  padding-bottom: 0;
+  padding-top: 0;
+}
+.rex-panel.rex-p-0 {
+  padding: 0;
+}
+.rex-panel.rex-pt-1 {
+  padding-top: 0.25rem;
+}
+.rex-panel.rex-pr-1 {
+  padding-right: 0.25rem;
+}
+.rex-panel.rex-pb-1 {
+  padding-bottom: 0.25rem;
+}
+.rex-panel.rex-pl-1 {
+  padding-left: 0.25rem;
+}
+.rex-panel.rex-px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+.rex-panel.rex-py-1 {
+  padding-bottom: 0.25rem;
+  padding-top: 0.25rem;
+}
+.rex-panel.rex-p-1 {
+  padding: 0.25rem;
+}
+.rex-panel.rex-pt-2 {
+  padding-top: 0.5rem;
+}
+.rex-panel.rex-pr-2 {
+  padding-right: 0.5rem;
+}
+.rex-panel.rex-pb-2 {
+  padding-bottom: 0.5rem;
+}
+.rex-panel.rex-pl-2 {
+  padding-left: 0.5rem;
+}
+.rex-panel.rex-px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.rex-panel.rex-py-2 {
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+}
+.rex-panel.rex-p-2 {
+  padding: 0.5rem;
+}
+.rex-panel.rex-pt-3 {
+  padding-top: 1rem;
+}
+.rex-panel.rex-pr-3 {
+  padding-right: 1rem;
+}
+.rex-panel.rex-pb-3 {
+  padding-bottom: 1rem;
+}
+.rex-panel.rex-pl-3 {
+  padding-left: 1rem;
+}
+.rex-panel.rex-px-3 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.rex-panel.rex-py-3 {
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+.rex-panel.rex-p-3 {
+  padding: 1rem;
+}
+.rex-panel.rex-pt-4 {
+  padding-top: 1.25rem;
+}
+.rex-panel.rex-pr-4 {
+  padding-right: 1.25rem;
+}
+.rex-panel.rex-pb-4 {
+  padding-bottom: 1.25rem;
+}
+.rex-panel.rex-pl-4,
+.rex-panel.rex-px-4 {
+  padding-left: 1.25rem;
+}
+.rex-panel.rex-px-4 {
+  padding-right: 1.25rem;
+}
+.rex-panel.rex-py-4 {
+  padding-bottom: 1.25rem;
+  padding-top: 1.25rem;
+}
+.rex-panel.rex-p-4 {
+  padding: 1.25rem;
+}
+.rex-panel.rex-pt-5 {
+  padding-top: 2rem;
+}
+.rex-panel.rex-pr-5 {
+  padding-right: 2rem;
+}
+.rex-panel.rex-pb-5 {
+  padding-bottom: 2rem;
+}
+.rex-panel.rex-pl-5 {
+  padding-left: 2rem;
+}
+.rex-panel.rex-px-5 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.rex-panel.rex-py-5 {
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+.rex-panel.rex-p-5 {
+  padding: 2rem;
+}
+.rex-panel.rex-pt-6 {
+  padding-top: 2.25rem;
+}
+.rex-panel.rex-pr-6 {
+  padding-right: 2.25rem;
+}
+.rex-panel.rex-pb-6 {
+  padding-bottom: 2.25rem;
+}
+.rex-panel.rex-pl-6,
+.rex-panel.rex-px-6 {
+  padding-left: 2.25rem;
+}
+.rex-panel.rex-px-6 {
+  padding-right: 2.25rem;
+}
+.rex-panel.rex-py-6 {
+  padding-bottom: 2.25rem;
+  padding-top: 2.25rem;
+}
+.rex-panel.rex-p-6 {
+  padding: 2.25rem;
+}
+.rex-panel.rex-pt-7 {
+  padding-top: 3rem;
+}
+.rex-panel.rex-pr-7 {
+  padding-right: 3rem;
+}
+.rex-panel.rex-pb-7 {
+  padding-bottom: 3rem;
+}
+.rex-panel.rex-pl-7 {
+  padding-left: 3rem;
+}
+.rex-panel.rex-px-7 {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+.rex-panel.rex-py-7 {
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+}
+.rex-panel.rex-p-7 {
+  padding: 3rem;
+}
+.rex-panel.rex-pt-8 {
+  padding-top: 3.25rem;
+}
+.rex-panel.rex-pr-8 {
+  padding-right: 3.25rem;
+}
+.rex-panel.rex-pb-8 {
+  padding-bottom: 3.25rem;
+}
+.rex-panel.rex-pl-8,
+.rex-panel.rex-px-8 {
+  padding-left: 3.25rem;
+}
+.rex-panel.rex-px-8 {
+  padding-right: 3.25rem;
+}
+.rex-panel.rex-py-8 {
+  padding-bottom: 3.25rem;
+  padding-top: 3.25rem;
+}
+.rex-panel.rex-p-8 {
+  padding: 3.25rem;
+}
+.rex-panel.rex-pt-9 {
+  padding-top: 4rem;
+}
+.rex-panel.rex-pr-9 {
+  padding-right: 4rem;
+}
+.rex-panel.rex-pb-9 {
+  padding-bottom: 4rem;
+}
+.rex-panel.rex-pl-9 {
+  padding-left: 4rem;
+}
+.rex-panel.rex-px-9 {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+.rex-panel.rex-py-9 {
+  padding-bottom: 4rem;
+  padding-top: 4rem;
+}
+.rex-panel.rex-p-9 {
+  padding: 4rem;
+}
+.rex-panel.rex-pt-10 {
+  padding-top: 4.25rem;
+}
+.rex-panel.rex-pr-10 {
+  padding-right: 4.25rem;
+}
+.rex-panel.rex-pb-10 {
+  padding-bottom: 4.25rem;
+}
+.rex-panel.rex-pl-10 {
+  padding-left: 4.25rem;
+}
+.rex-panel.rex-px-10 {
+  padding-left: 4.25rem;
+  padding-right: 4.25rem;
+}
+.rex-panel.rex-py-10 {
+  padding-bottom: 4.25rem;
+  padding-top: 4.25rem;
+}
+.rex-panel.rex-p-10 {
+  padding: 4.25rem;
+}
+.rex-panel.rex-panel-shadow0 {
+  box-shadow: none;
+}
+.rex-panel.rex-panel-shadow1 {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 0 2px rgba(0, 0, 0, 0.14);
+}
+.rex-panel.rex-panel-shadow2 {
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2), 0 3px 4px rgba(0, 0, 0, 0.12),
+    0 2px 4px rgba(0, 0, 0, 0.14);
+}
+.rex-panel.rex-panel-shadow3 {
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2), 0 3px 4px rgba(0, 0, 0, 0.12),
+    0 3px 3px rgba(0, 0, 0, 0.14);
+}
+.rex-panel.rex-panel-shadow4 {
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2), 0 4px 5px rgba(0, 0, 0, 0.12),
+    0 2px 4px rgba(0, 0, 0, 0.14);
+}
+.rex-panel.rex-panel-shadow5 {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2), 0 1px 18px rgba(0, 0, 0, 0.12),
+    0 6px 10px rgba(0, 0, 0, 0.14);
+}
+.rex-panel.rex-panel-shadow6 {
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2), 0 3px 14px rgba(0, 0, 0, 0.12),
+    0 8px 10px rgba(0, 0, 0, 0.14);
+}
+.rex-panel.rex-panel-shadow7 {
+  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.2), 0 3px 16px rgba(0, 0, 0, 0.12),
+    0 9px 12px rgba(0, 0, 0, 0.14);
+}
+.rex-panel.rex-panel-shadow8 {
+  box-shadow: 0 7px 8px rgba(0, 0, 0, 0.2), 0 5px 22px rgba(0, 0, 0, 0.12),
+    0 12px 17px rgba(0, 0, 0, 0.14);
+}
+.rex-panel.rex-panel-shadow9 {
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2), 0 6px 30px rgba(0, 0, 0, 0.12),
+    0 16px 24px rgba(0, 0, 0, 0.14);
+}
+.rex-panel.rex-panel-shadow10 {
+  box-shadow: 0 11px 15px rgba(0, 0, 0, 0.2), 0 9px 46px rgba(0, 0, 0, 0.12),
+    0 24px 38px rgba(0, 0, 0, 0.14);
+}
+
+/*!
+ * 
+ * @license @rakuten-rex/radio-button v1.4.0 2020-07-02
+ * Radio/Radio.development.css
+ * 
+ * Copyright (c) 2018-present, Rakuten, Inc.
+ * 
+ * This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.
+ */
+.rex-radio {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  background-color: inherit;
+  color: #333;
+  display: inline-flex;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: var(--rex-radio-margin-top, 0.5rem)
+    var(--rex-radio-margin-right, 3rem) var(--rex-radio-margin-bottom, 0.5rem)
+    var(--rex-radio-margin-left, 0);
+  overflow: visible;
+  padding: 0;
+  text-align: left;
+}
+.rex-radio,
+.rex-radio:after,
+.rex-radio:before {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.rex-radio:last-of-type {
+  margin-right: 0;
+}
+.rex-radio input[type="radio"] {
+  opacity: 1;
+  position: absolute;
+}
+.rex-radio input[type="radio"]:last-of-type {
+  margin-right: 0;
+}
+.rex-radio input[type="radio"]:checked + .rex-radio-label {
+  color: var(--rex-radio-checked-label, #333);
+}
+.rex-radio input[type="radio"]:checked + .rex-radio-label:before {
+  background-color: var(--rex-radio-theme, #1364ff);
+  border-color: var(--rex-radio-checked-border, #1364ff);
+  box-shadow: inset 0 0 0 4px #fff;
+}
+.rex-radio input[type="radio"]:disabled + .rex-radio-label {
+  color: var(--rex-radio-disabled-label, #898989);
+}
+.rex-radio input[type="radio"]:disabled + .rex-radio-label:before {
+  background: #fff;
+  border-color: var(--rex-radio-disabled-border, #dfdfdf);
+}
+.rex-radio.rex-form-block {
+  display: flex !important;
+}
+.rex-radio .rex-radio-label {
+  color: var(--rex-radio-label, #606060);
+  line-height: 1.5;
+}
+.rex-radio .rex-radio-label:before {
+  background: #fff;
+  border: 2px solid var(--rex-radio-border, #606060);
+  border-radius: 100%;
+  box-sizing: border-box;
+  color: var(--rex-radio-label, #606060);
+  content: "";
+  cursor: pointer;
+  display: inline-block;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+  position: relative;
+  text-align: center;
+  top: 0;
+  transition: all 0.25s ease;
+  vertical-align: top;
+  width: 1.5rem;
+}
+.rex-radio + .rex-radio-label:empty:before {
+  margin-right: 0;
+}
+
+/*!
+ * 
+ * @license @rakuten-rex/select v1.4.1 2020-08-17
+ * SelectLabelHelper/SelectLabelHelper.development.css
+ * 
+ * Copyright (c) 2018-present, Rakuten, Inc.
+ * 
+ * This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.
+ */
+.rex-select {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  background-color: #fff;
+  border: 1px solid var(--rex-select-theme-border, #606060);
+  border-radius: 0.32rem;
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1rem;
+  line-height: 1.5;
+  position: relative;
+  text-align: left;
+  transition: border-color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+.rex-select,
+.rex-select:after,
+.rex-select:before {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.rex-select:after {
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 8px solid var(--rex-select-theme-border, #606060);
+  content: "";
+  height: 0;
+  position: absolute;
+  right: 0.9375rem;
+  top: 50%;
+  transform: rotate(0deg) translateY(-50%);
+  transform-origin: center;
+  transition: border-top 0.15s ease-in-out;
+  width: 0;
+}
+.rex-select.hover:not(.disabled):not(.active):not(.error):not(.valid),
+.rex-select:hover:not(.disabled):not(.active):not(.error):not(.valid) {
+  background-color: #fff;
+  border-color: var(--rex-select-theme-hover-border, #1364ff);
+}
+.rex-select.hover:not(.disabled):not(.active):not(.error):not(.valid):after,
+.rex-select:hover:not(.disabled):not(.active):not(.error):not(.valid):after {
+  border-top: 8px solid var(--rex-select-theme-hover-border, #1364ff);
+}
+.rex-select.hover select:not([disabled]):not(.active):not(.error):not(.valid),
+.rex-select:hover select:not([disabled]):not(.active):not(.error):not(.valid) {
+  border-color: #fff;
+  color: var(--rex-select-theme-hover-text, #333);
+}
+.rex-select.hover
+  select:not([disabled]):not(.active):not(.error):not(.valid).rex-select-placeholder,
+.rex-select:hover
+  select:not([disabled]):not(.active):not(.error):not(.valid).rex-select-placeholder {
+  color: var(--rex-select-theme-hover-placeholder, #606060);
+}
+.rex-select.disabled {
+  border-color: var(--rex-select-theme-disabled-border, #dfdfdf);
+}
+.rex-select.disabled:after {
+  border-top: none;
+}
+.rex-select.active,
+.rex-select.focus,
+.rex-select:active,
+.rex-select:focus {
+  outline: none;
+}
+.rex-select.active:not(.disabled),
+.rex-select.focus:not(.disabled),
+.rex-select:active:not(.disabled),
+.rex-select:focus:not(.disabled) {
+  background-color: var(--rex-select-theme-active-border, #1364ff);
+  border-color: var(--rex-select-theme-active-border, #1364ff);
+}
+.rex-select.active:not(.disabled):after,
+.rex-select.focus:not(.disabled):after,
+.rex-select:active:not(.disabled):after,
+.rex-select:focus:not(.disabled):after {
+  border-top: 8px solid var(--rex-select-theme-active-border, #1364ff);
+  transform: rotate(180deg) translateY(50%);
+}
+.rex-select.error:not(.disabled) {
+  border-color: var(--rex-select-theme-error-border, #df0101);
+}
+.rex-select.error:not(.disabled):after {
+  border-top: 8px solid var(--rex-select-theme-error-border, #df0101);
+}
+.rex-select.error.active {
+  background-color: #fff;
+}
+.rex-select.valid:not(.disabled) {
+  border-color: var(--rex-select-theme-valid-border, #606060);
+}
+.rex-select.valid:not(.disabled):after {
+  border-top: 8px solid var(--rex-select-theme-valid-border, #606060);
+}
+.rex-select.valid.active,
+.rex-select select {
+  background-color: #fff;
+}
+.rex-select select {
+  -webkit-appearance: none;
+  background-clip: padding-box;
+  border: 1px solid #fff;
+  border-radius: 0.25rem;
+  color: var(--rex-select-theme-text, #333);
+  cursor: pointer;
+  display: block;
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0.375rem 2.375rem 0.375rem 0.625rem;
+  transition: color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  width: 100%;
+}
+.rex-select select.active,
+.rex-select select.focus,
+.rex-select select:active,
+.rex-select select:focus {
+  outline: none;
+}
+.rex-select select.active:not(.disabled):not(.error):not(.valid),
+.rex-select select.focus:not(.disabled):not(.error):not(.valid),
+.rex-select select:active:not(.disabled):not(.error):not(.valid),
+.rex-select select:focus:not(.disabled):not(.error):not(.valid) {
+  border-color: var(--rex-select-theme-active-border, #1364ff);
+  color: var(--rex-select-theme-active-text, #333);
+}
+.rex-select
+  select.active:not(.disabled):not(.error):not(.valid).rex-select-placeholder,
+.rex-select
+  select.focus:not(.disabled):not(.error):not(.valid).rex-select-placeholder,
+.rex-select
+  select:active:not(.disabled):not(.error):not(.valid).rex-select-placeholder,
+.rex-select
+  select:focus:not(.disabled):not(.error):not(.valid).rex-select-placeholder {
+  color: var(--rex-select-theme-active-placeholder, #606060);
+}
+.rex-select select.disabled,
+.rex-select select[disabled] {
+  border-color: transparent;
+  color: var(--rex-select-theme-disabled-text, #898989);
+  cursor: auto;
+}
+.rex-select select.disabled.rex-select-placeholder,
+.rex-select select[disabled].rex-select-placeholder {
+  color: var(--rex-select-theme-disabled-placeholder, #898989);
+}
+.rex-select select.error {
+  color: var(--rex-select-theme-error-text, #333);
+}
+.rex-select select.error.rex-select-placeholder {
+  color: var(--rex-select-theme-error-placeholder, #898989);
+}
+.rex-select select.valid {
+  color: var(--rex-select-theme-valid-text, #333);
+}
+.rex-select select.valid.rex-select-placeholder {
+  color: var(--rex-select-theme-valid-placeholder, #898989);
+}
+.rex-select select.rex-select-placeholder {
+  color: var(--rex-select-theme-placeholder, #717171);
+}
+.rex-select-label-ui {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  background-color: inherit;
+  color: var(--rex-select-label-theme-text, #606060);
+  display: block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 0.75rem;
+  line-height: 1.5;
+  text-align: left;
+  transition: color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+.rex-select-label-ui,
+.rex-select-label-ui:after,
+.rex-select-label-ui:before {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.rex-select-label-ui.hover {
+  color: var(--rex-select-label-theme-hover-text, #1364ff);
+}
+.rex-select-label-ui.error {
+  color: var(--rex-select-label-theme-error-text, #df0101);
+}
+.rex-select-label-ui.valid {
+  color: var(--rex-select-label-theme-valid-text, #606060);
+}
+.rex-select-label-ui.disabled,
+.rex-select-label-ui.disabled.active,
+.rex-select-label-ui.disabled.focus,
+.rex-select-label-ui.disabled:active,
+.rex-select-label-ui.disabled:focus {
+  color: var(--rex-select-label-theme-disabled-text, #898989);
+}
+.rex-select-label-ui.active,
+.rex-select-label-ui.focus,
+.rex-select-label-ui:active,
+.rex-select-label-ui:focus {
+  outline: none;
+}
+.rex-select-label-ui.active:not(.disabled):not(.valid):not(.error),
+.rex-select-label-ui.focus:not(.disabled):not(.valid):not(.error),
+.rex-select-label-ui:active:not(.disabled):not(.valid):not(.error),
+.rex-select-label-ui:focus:not(.disabled):not(.valid):not(.error) {
+  color: var(--rex-select-label-theme-active-text, #1364ff);
+}
+.rex-select-helper-ui {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  background-color: inherit;
+  color: var(--rex-select-helper-theme-text, #606060);
+  display: block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 0.75rem;
+  line-height: 1.5;
+  position: relative;
+  text-align: left;
+  transition: color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+.rex-select-helper-ui,
+.rex-select-helper-ui:after,
+.rex-select-helper-ui:before {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.rex-select-helper-ui svg path {
+  transition: fill 0.15s ease-in-out;
+}
+.rex-select-helper-ui.disabled {
+  color: var(--rex-select-helper-theme-disabled-text, #898989);
+}
+.rex-select-helper-ui.active:not(.disabled):not(.error):not(.valid),
+.rex-select-helper-ui.focus:not(.disabled):not(.error):not(.valid),
+.rex-select-helper-ui:active:not(.disabled):not(.error):not(.valid),
+.rex-select-helper-ui:focus:not(.disabled):not(.error):not(.valid) {
+  color: var(--rex-select-helper-theme-active-text, #606060);
+  outline: none;
+}
+.rex-select-helper-ui.error {
+  align-items: center;
+  color: var(--rex-select-helper-theme-error-text, #df0101);
+  display: flex;
+}
+.rex-select-helper-ui.error svg {
+  font-size: 0.75rem;
+  margin-right: 0.25rem;
+}
+.rex-select-helper-ui.error svg path {
+  fill: var(--rex-select-helper-theme-error-text, #df0101);
+}
+.rex-select-helper-ui.valid {
+  align-items: center;
+  color: var(--rex-select-helper-theme-valid-text, #047205);
+  display: flex;
+}
+.rex-select-helper-ui.valid svg {
+  font-size: 0.75rem;
+  margin-right: 0.25rem;
+}
+.rex-select-helper-ui.valid svg path {
+  fill: var(--rex-select-helper-theme-valid-text, #047205);
+}
+.rex-select-helper-ui.hover {
+  color: var(--rex-select-helper-theme-hover-text, #606060);
+}
+.rex-select-label-helper label {
+  margin-bottom: 0.25rem;
+  padding-left: 0.75rem;
+}
+.rex-select-label-helper small {
+  margin-top: 0.25rem;
+  padding-left: 0.75rem;
+}
+.rex-select-label-helper.hover
+  label:not(.disabled):not(.active):not(.error):not(.valid),
+.rex-select-label-helper:hover
+  label:not(.disabled):not(.active):not(.error):not(.valid) {
+  color: var(--rex-select-label-theme-hover-text, #1364ff);
+}
+.rex-select-label-helper.hover
+  small:not(.disabled):not(.active):not(.error):not(.valid),
+.rex-select-label-helper:hover
+  small:not(.disabled):not(.active):not(.error):not(.valid) {
+  color: var(--rex-select-helper-theme-hover-text, #606060);
+}
+.rex-select-label-helper.hover
+  select:not([disabled]):not(.active):not(.error):not(.valid),
+.rex-select-label-helper:hover
+  select:not([disabled]):not(.active):not(.error):not(.valid) {
+  border-color: #fff;
+  color: var(--rex-select-theme-hover-text, #333);
+}
+.rex-select-label-helper.hover
+  select:not([disabled]):not(.active):not(.error):not(.valid).rex-select-placeholder,
+.rex-select-label-helper:hover
+  select:not([disabled]):not(.active):not(.error):not(.valid).rex-select-placeholder {
+  color: var(--rex-select-theme-hover-placeholder, #606060);
+}
+.rex-select-label-helper.hover
+  > div:not(.disabled):not(.active):not(.error):not(.valid),
+.rex-select-label-helper:hover
+  > div:not(.disabled):not(.active):not(.error):not(.valid) {
+  background-color: #fff;
+  border-color: var(--rex-select-theme-hover-border, #1364ff);
+}
+.rex-select-label-helper.hover
+  > div:not(.disabled):not(.active):not(.error):not(.valid):after,
+.rex-select-label-helper:hover
+  > div:not(.disabled):not(.active):not(.error):not(.valid):after {
+  border-top: 8px solid var(--rex-select-theme-hover-border, #1364ff);
+}
+.rex-select-label-helper.active,
+.rex-select-label-helper.focus,
+.rex-select-label-helper:active,
+.rex-select-label-helper:focus {
+  outline: none;
+}
+
+/*!
+ * 
+ * @license @rakuten-rex/stepper v1.6.0 2020-07-01
+ * StepperLabel/StepperLabel.development.css
+ * 
+ * Copyright (c) 2018-present, Rakuten, Inc.
+ * 
+ * This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.
+ */
+.rex-stepper {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  background-color: inherit;
+  color: #333;
+  display: flex;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: var(--rex-stepper-theme-margin-top, 0)
+    var(--rex-stepper-theme-margin-right, 0)
+    var(--rex-stepper-theme-margin-bottom, 0.5rem)
+    var(--rex-stepper-theme-margin-left, 0);
+  text-align: left;
+}
+.rex-stepper,
+.rex-stepper:after,
+.rex-stepper:before {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.rex-stepper input::-webkit-inner-spin-button,
+.rex-stepper input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.rex-stepper input[type="number"] {
+  -moz-appearance: textfield;
+}
+.rex-stepper button {
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  padding: 0;
+  text-transform: none;
+}
+.rex-stepper button::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+.rex-stepper .rex-icon-button {
+  background-color: var(--rex-stepper-theme-button, #fff);
+  border: none;
+  height: 2rem;
+  outline: none;
+  padding: 0;
+  transition: all 0.25s ease;
+  width: 2.5rem;
+}
+.rex-stepper .rex-icon-button svg path {
+  fill: var(--rex-stepper-theme-default-icon, #606060);
+}
+.rex-stepper .rex-icon-button:focus {
+  outline: none;
+}
+.rex-stepper .rex-icon-button.hover:not([disabled]),
+.rex-stepper .rex-icon-button:hover:not([disabled]) {
+  background-color: var(--rex-stepper-theme-hover-button, #1364ff);
+}
+.rex-stepper .rex-icon-button.hover svg path,
+.rex-stepper .rex-icon-button:hover svg path {
+  fill: var(--rex-stepper-theme-hover-icon, #fff);
+}
+.rex-stepper .rex-icon-button.active:not([disabled]),
+.rex-stepper .rex-icon-button.focus:not([disabled]),
+.rex-stepper .rex-icon-button:active:not([disabled]),
+.rex-stepper .rex-icon-button:focus:not([disabled]) {
+  background-color: var(--rex-stepper-theme-active-button, #1364ff);
+}
+.rex-stepper .rex-icon-button.active svg path,
+.rex-stepper .rex-icon-button.focus svg path,
+.rex-stepper .rex-icon-button:active svg path,
+.rex-stepper .rex-icon-button:focus svg path {
+  fill: var(--rex-stepper-theme-active-icon, #fff);
+}
+.rex-stepper .rex-icon-button.disabled:not(.hover),
+.rex-stepper .rex-icon-button:disabled:not(.hover) {
+  background-color: var(--rex-stepper-theme-disabled-button, #fff);
+  pointer-events: none;
+}
+.rex-stepper .rex-icon-button.disabled svg path,
+.rex-stepper .rex-icon-button:disabled svg path {
+  fill: var(--rex-stepper-theme-disabled-icon, #898989);
+}
+.rex-stepper .rex-icon-button svg:hover path {
+  fill: var(--rex-stepper-theme-hover-icon, #fff);
+}
+.rex-stepper .rex-stepper-counter {
+  background: var(--rex-stepper-theme-background, #fff);
+  border: none;
+  box-sizing: border-box;
+  color: var(--rex-stepper-theme-number-text, #333);
+  display: inline-block;
+  font-size: 1rem;
+  height: 2rem;
+  line-height: 2rem;
+  min-width: 3.5rem;
+  outline: none;
+  text-align: center;
+  vertical-align: top;
+  width: 100%;
+}
+.rex-stepper .rex-stepper-counter:focus {
+  outline: none;
+}
+.rex-stepper .rex-stepper-counter:disabled:not(.hover) {
+  -webkit-text-fill-color: var(
+    --rex-stepper-theme-disabled-input-text,
+    #898989
+  );
+  background-color: var(--rex-stepper-theme-disabled-input-background, #fff);
+  color: var(--rex-stepper-theme-disabled-input-text, #898989);
+  opacity: 1;
+  pointer-events: none;
+}
+.rex-stepper .minus {
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+.rex-stepper .plus {
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+.rex-stepper-label-ui {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  background-color: inherit;
+  color: var(--rex-stepper-label-theme-text, #606060);
+  display: block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 0.75rem;
+  line-height: 1.5;
+  text-align: left;
+  transition: color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+.rex-stepper-label-ui,
+.rex-stepper-label-ui:after,
+.rex-stepper-label-ui:before {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.rex-stepper-label-ui.hover {
+  color: var(--rex-stepper-label-theme-hover-text, #1364ff);
+}
+.rex-stepper-label-ui.disabled,
+.rex-stepper-label-ui.disabled.active,
+.rex-stepper-label-ui.disabled.focus,
+.rex-stepper-label-ui.disabled:active,
+.rex-stepper-label-ui.disabled:focus,
+.rex-stepper-label-ui[disabled],
+.rex-stepper-label-ui[disabled].active,
+.rex-stepper-label-ui[disabled].focus,
+.rex-stepper-label-ui[disabled]:active,
+.rex-stepper-label-ui[disabled]:focus {
+  color: var(--rex-stepper-label-theme-disabled-text, #898989);
+}
+.rex-stepper-label-ui.active,
+.rex-stepper-label-ui.focus,
+.rex-stepper-label-ui:active,
+.rex-stepper-label-ui:focus {
+  outline: none;
+}
+.rex-stepper-label-ui.active:not([disabled]),
+.rex-stepper-label-ui.focus:not([disabled]),
+.rex-stepper-label-ui:active:not([disabled]),
+.rex-stepper-label-ui:focus:not([disabled]) {
+  color: var(--rex-stepper-label-theme-active-text, #1364ff);
+}
+.rex-stepper-label {
+  margin: var(--rex-stepper-theme-margin-top, 0)
+    var(--rex-stepper-theme-margin-right, 0)
+    var(--rex-stepper-theme-margin-bottom, 0.5rem)
+    var(--rex-stepper-theme-margin-left, 0);
+}
+.rex-stepper-label label {
+  margin-bottom: 0.25rem;
+  padding-left: 0.75rem;
+}
+.rex-stepper-label .rex-stepper {
+  margin: initial;
+}
+.rex-stepper-label.hover label:not([disabled]):not(.active),
+.rex-stepper-label:hover label:not([disabled]):not(.active) {
+  color: var(--rex-stepper-label-theme-hover-text, #1364ff);
+}
+
+/*!
+ * 
+ * @license @rakuten-rex/switch v1.5.0 2020-07-16
+ * SwitchToggle/SwitchToggle.development.css
+ * 
+ * Copyright (c) 2018-present, Rakuten, Inc.
+ * 
+ * This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.
+ */
+.rex-switch {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  background-color: inherit;
+  color: #333;
+  display: block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: var(--rex-switch-margin-top, 0) var(--rex-switch-margin-right, 0)
+    var(--rex-switch-margin-bottom, 0.5rem) var(--rex-switch-margin-left, 0);
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+}
+.rex-switch,
+.rex-switch:after,
+.rex-switch:before {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.rex-switch input {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+}
+.rex-switch-label {
+  color: var(--rex-switch-label, #606060);
+  font-size: 1rem;
+  line-height: 22px;
+  vertical-align: top;
+}
+.rex-switch-label.label-left {
+  margin-right: var(--rex-switch-label-margin-right, 0.5rem);
+}
+.rex-switch-label.label-right {
+  margin-left: var(--rex-switch-label-margin-left, 0.5rem);
+}
+.rex-switch.checked .rex-switch-label {
+  color: var(--rex-switch-checked-label, #333);
+}
+.rex-switch.disabled .rex-switch-label {
+  color: var(--rex-switch-disabled-label, #898989);
+}
+.rex-switch-container {
+  display: inline-block;
+  height: 22px;
+  position: relative;
+  width: 42px;
+}
+.rex-switch-container input[type="checkbox"] {
+  cursor: pointer;
+  height: 100%;
+  opacity: 0;
+  width: 100%;
+}
+.rex-switch-container input[type="checkbox"]:checked + .rex-switch-knob {
+  background-color: var(--rex-switch-theme, #1364ff);
+}
+.rex-switch-container input[type="checkbox"]:checked + .rex-switch-knob:before {
+  -ms-transform: translateX(20px);
+  -webkit-transform: translateX(20px);
+  transform: translateX(20px);
+}
+.rex-switch-container input[type="checkbox"]:disabled + .rex-switch-knob {
+  background: var(--rex-switch-disabled-background, #dfdfdf);
+  cursor: auto;
+  pointer-events: none;
+}
+.rex-switch-container input[type="checkbox"] + .rex-switch-knob {
+  background-color: var(--rex-switch-default, #828282);
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+.rex-switch-container input[type="checkbox"] + .rex-switch-knob,
+.rex-switch-container input[type="checkbox"] + .rex-switch-knob:before {
+  -webkit-transition: left 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    -webkit-transform 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-radius: 0.25rem;
+  position: absolute;
+  transition: left 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    transform 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+.rex-switch-container input[type="checkbox"] + .rex-switch-knob:before {
+  background-color: var(--rex-switch-knob, #fff);
+  bottom: 2px;
+  content: "";
+  height: 18px;
+  left: 2px;
+  width: 18px;
+}
+
+/*!
+ * 
+ * @license @rakuten-rex/text-field v1.5.0 2020-09-07
+ * HelperUi/HelperUi.development.css
+ * 
+ * Copyright (c) 2018-present, Rakuten, Inc.
+ * 
+ * This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.
+ */
+.rex-text-field-helper-ui {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  background-color: inherit;
+  color: var(--rex-text-field-helper-theme-text, #606060);
+  display: block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 0.875rem;
+  line-height: 1.5;
+  position: relative;
+  text-align: left;
+  transition: color 0.15s ease-in-out;
+}
+.rex-text-field-helper-ui,
+.rex-text-field-helper-ui:after,
+.rex-text-field-helper-ui:before {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.rex-text-field-helper-ui svg path {
+  transition: fill 0.15s ease-in-out;
+}
+.rex-text-field-helper-ui.hover {
+  color: var(--rex-text-field-helper-theme-hover-text, #606060);
+}
+.rex-text-field-helper-ui.error {
+  align-items: center;
+  color: var(--rex-text-field-helper-theme-error-text, #df0101);
+  display: flex;
+}
+.rex-text-field-helper-ui.error svg {
+  font-size: 0.875rem;
+  margin-right: 0.5rem;
+}
+.rex-text-field-helper-ui.error svg path {
+  fill: var(--rex-text-field-helper-theme-error-text, #df0101);
+}
+.rex-text-field-helper-ui.valid {
+  align-items: center;
+  color: var(--rex-text-field-helper-theme-valid-text, #047205);
+  display: flex;
+}
+.rex-text-field-helper-ui.valid svg {
+  font-size: 0.875rem;
+  margin-right: 0.5rem;
+}
+.rex-text-field-helper-ui.valid svg path {
+  fill: var(--rex-text-field-helper-theme-valid-text, #047205);
+}
+.rex-text-field-helper-ui.active:not(.disabled):not(.error):not(.valid),
+.rex-text-field-helper-ui:active:not(.disabled):not(.error):not(.valid) {
+  color: var(--rex-text-field-helper-theme-active-text, #606060);
+}
+.rex-text-field-helper-ui.focus,
+.rex-text-field-helper-ui:focus {
+  outline: none;
+}
+.rex-text-field-helper-ui.disabled {
+  color: var(--rex-text-field-helper-theme-disabled-text, #898989);
+}
+.rex-text-field-helper-ui.disabled svg path {
+  fill: var(--rex-text-field-helper-theme-disabled-text, #898989);
+}
+
+/*!
+ * 
+ * @license @rakuten-rex/text-field v1.5.0 2020-09-07
+ * LabelUi/LabelUi.development.css
+ * 
+ * Copyright (c) 2018-present, Rakuten, Inc.
+ * 
+ * This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.
+ */
+.rex-text-field-label-ui {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  background-color: inherit;
+  color: var(--rex-text-field-label-theme-text, #606060);
+  display: block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 0.875rem;
+  line-height: 1.5;
+  text-align: left;
+  transition: color 0.15s ease-in-out;
+}
+.rex-text-field-label-ui,
+.rex-text-field-label-ui:after,
+.rex-text-field-label-ui:before {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.rex-text-field-label-ui.hover {
+  color: var(--rex-text-field-label-theme-hover-text, #1364ff);
+}
+.rex-text-field-label-ui.error {
+  color: var(--rex-text-field-label-theme-error-text, #df0101);
+}
+.rex-text-field-label-ui.valid {
+  color: var(--rex-text-field-label-theme-valid-text, #606060);
+}
+.rex-text-field-label-ui.active:not(.disabled):not(.error):not(.valid),
+.rex-text-field-label-ui:active:not(.disabled):not(.error):not(.valid) {
+  color: var(--rex-text-field-label-theme-active-text, #1364ff);
+}
+.rex-text-field-label-ui.focus,
+.rex-text-field-label-ui:focus {
+  outline: none;
+}
+.rex-text-field-label-ui.disabled {
+  color: var(--rex-text-field-label-theme-disabled-text, #898989);
+}
+
+/*!
+ * 
+ * @license @rakuten-rex/text-field v1.5.0 2020-09-07
+ * TextFieldHelper/TextFieldHelper.development.css
+ * 
+ * Copyright (c) 2018-present, Rakuten, Inc.
+ * 
+ * This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.
+ */
+.rex-text-field-helper-ui {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  background-color: inherit;
+  color: var(--rex-text-field-helper-theme-text, #606060);
+  display: block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 0.875rem;
+  line-height: 1.5;
+  position: relative;
+  text-align: left;
+  transition: color 0.15s ease-in-out;
+}
+.rex-text-field-helper-ui,
+.rex-text-field-helper-ui:after,
+.rex-text-field-helper-ui:before {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.rex-text-field-helper-ui svg path {
+  transition: fill 0.15s ease-in-out;
+}
+.rex-text-field-helper-ui.hover {
+  color: var(--rex-text-field-helper-theme-hover-text, #606060);
+}
+.rex-text-field-helper-ui.error {
+  align-items: center;
+  color: var(--rex-text-field-helper-theme-error-text, #df0101);
+  display: flex;
+}
+.rex-text-field-helper-ui.error svg {
+  font-size: 0.875rem;
+  margin-right: 0.5rem;
+}
+.rex-text-field-helper-ui.error svg path {
+  fill: var(--rex-text-field-helper-theme-error-text, #df0101);
+}
+.rex-text-field-helper-ui.valid {
+  align-items: center;
+  color: var(--rex-text-field-helper-theme-valid-text, #047205);
+  display: flex;
+}
+.rex-text-field-helper-ui.valid svg {
+  font-size: 0.875rem;
+  margin-right: 0.5rem;
+}
+.rex-text-field-helper-ui.valid svg path {
+  fill: var(--rex-text-field-helper-theme-valid-text, #047205);
+}
+.rex-text-field-helper-ui.active:not(.disabled):not(.error):not(.valid),
+.rex-text-field-helper-ui:active:not(.disabled):not(.error):not(.valid) {
+  color: var(--rex-text-field-helper-theme-active-text, #606060);
+}
+.rex-text-field-helper-ui.focus,
+.rex-text-field-helper-ui:focus {
+  outline: none;
+}
+.rex-text-field-helper-ui.disabled {
+  color: var(--rex-text-field-helper-theme-disabled-text, #898989);
+}
+.rex-text-field-helper-ui.disabled svg path {
+  fill: var(--rex-text-field-helper-theme-disabled-text, #898989);
+}
+.rex-text-field-ui {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  background-color: #fff;
+  border: 1px solid var(--rex-text-field-theme-border, #606060);
+  border-radius: 0.32rem;
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 0;
+  text-align: left;
+  transition: border-color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+.rex-text-field-ui,
+.rex-text-field-ui:after,
+.rex-text-field-ui:before {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.rex-text-field-ui.hover {
+  border-color: var(--rex-text-field-theme-hover-border, #1364ff);
+}
+.rex-text-field-ui.hover input::-webkit-input-placeholder {
+  color: var(--rex-text-field-theme-hover-placeholder, #606060);
+}
+.rex-text-field-ui.hover input:-moz-placeholder,
+.rex-text-field-ui.hover input::-moz-placeholder {
+  color: var(--rex-text-field-theme-hover-placeholder, #606060);
+}
+.rex-text-field-ui.hover input:-ms-input-placeholder {
+  color: var(--rex-text-field-theme-hover-placeholder, #606060);
+}
+.rex-text-field-ui.active:not(.disabled):not(.error):not(.valid),
+.rex-text-field-ui.focus:not(.disabled):not(.error):not(.valid),
+.rex-text-field-ui:active:not(.disabled):not(.error):not(.valid),
+.rex-text-field-ui:focus:not(.disabled):not(.error):not(.valid) {
+  background-color: var(--rex-text-field-theme-active-border, #1364ff);
+  border-color: var(--rex-text-field-theme-active-border, #1364ff);
+  outline: none;
+}
+.rex-text-field-ui.disabled {
+  border-color: var(--rex-text-field-theme-disabled-border, #dfdfdf);
+}
+.rex-text-field-ui.error:not(.disabled) {
+  border-color: var(--rex-text-field-theme-error-border, #df0101);
+}
+.rex-text-field-ui.error svg path {
+  fill: var(--rex-text-field-theme-error-icon-color, #df0101);
+}
+.rex-text-field-ui.valid:not(.disabled) {
+  border-color: var(--rex-text-field-theme-valid-border, #606060);
+}
+.rex-text-field-ui.valid svg path {
+  fill: var(--rex-text-field-theme-valid-icon-color, #606060);
+}
+.rex-text-field-ui > div {
+  align-items: flex-end;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  display: flex;
+  padding: 0.375rem 0.6875rem 0.375rem 0.625rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
+}
+.rex-text-field-ui > div.active:not(.error):not(.valid) {
+  border: 1px solid var(--rex-text-field-theme-active-border, #1364ff);
+}
+.rex-text-field-ui > div input {
+  -webkit-font-smoothing: antialiased;
+  background-clip: padding-box;
+  border: none;
+  box-sizing: border-box;
+  color: var(--rex-text-field-theme-text, #333);
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+  outline: none;
+  padding: 0 1rem 0 0;
+  transition: color 0.15s ease-in-out;
+  width: 100%;
+}
+.rex-text-field-ui > div input::-webkit-input-placeholder {
+  color: var(--rex-text-field-theme-placeholder, #717171);
+  transition: color 0.15s ease-in-out;
+}
+.rex-text-field-ui > div input:-moz-placeholder,
+.rex-text-field-ui > div input::-moz-placeholder {
+  color: var(--rex-text-field-theme-placeholder, #717171);
+  transition: color 0.15s ease-in-out;
+}
+.rex-text-field-ui > div input:-ms-input-placeholder {
+  color: var(--rex-text-field-theme-placeholder, #717171);
+  transition: color 0.15s ease-in-out;
+}
+.rex-text-field-ui > div input.active:not([disabled]):not(.error):not(.valid),
+.rex-text-field-ui > div input.focus:not([disabled]):not(.error):not(.valid),
+.rex-text-field-ui > div input:active:not([disabled]):not(.error):not(.valid),
+.rex-text-field-ui > div input:focus:not([disabled]):not(.error):not(.valid) {
+  color: var(--rex-text-field-theme-active-text, #333);
+}
+.rex-text-field-ui
+  > div
+  input.active:not([disabled]):not(.error):not(.valid)::-webkit-input-placeholder,
+.rex-text-field-ui
+  > div
+  input.focus:not([disabled]):not(.error):not(.valid)::-webkit-input-placeholder,
+.rex-text-field-ui
+  > div
+  input:active:not([disabled]):not(.error):not(.valid)::-webkit-input-placeholder,
+.rex-text-field-ui
+  > div
+  input:focus:not([disabled]):not(.error):not(.valid)::-webkit-input-placeholder {
+  color: var(--rex-text-field-theme-active-placeholder, #606060);
+}
+.rex-text-field-ui
+  > div
+  input.active:not([disabled]):not(.error):not(.valid):-moz-placeholder,
+.rex-text-field-ui
+  > div
+  input.active:not([disabled]):not(.error):not(.valid)::-moz-placeholder,
+.rex-text-field-ui
+  > div
+  input.focus:not([disabled]):not(.error):not(.valid):-moz-placeholder,
+.rex-text-field-ui
+  > div
+  input.focus:not([disabled]):not(.error):not(.valid)::-moz-placeholder,
+.rex-text-field-ui
+  > div
+  input:active:not([disabled]):not(.error):not(.valid):-moz-placeholder,
+.rex-text-field-ui
+  > div
+  input:active:not([disabled]):not(.error):not(.valid)::-moz-placeholder,
+.rex-text-field-ui
+  > div
+  input:focus:not([disabled]):not(.error):not(.valid):-moz-placeholder,
+.rex-text-field-ui
+  > div
+  input:focus:not([disabled]):not(.error):not(.valid)::-moz-placeholder {
+  color: var(--rex-text-field-theme-active-placeholder, #606060);
+}
+.rex-text-field-ui
+  > div
+  input.active:not([disabled]):not(.error):not(.valid):-ms-input-placeholder,
+.rex-text-field-ui
+  > div
+  input.focus:not([disabled]):not(.error):not(.valid):-ms-input-placeholder,
+.rex-text-field-ui
+  > div
+  input:active:not([disabled]):not(.error):not(.valid):-ms-input-placeholder,
+.rex-text-field-ui
+  > div
+  input:focus:not([disabled]):not(.error):not(.valid):-ms-input-placeholder {
+  color: var(--rex-text-field-theme-active-placeholder, #606060);
+}
+.rex-text-field-ui > div input.disabled,
+.rex-text-field-ui > div input[disabled] {
+  color: var(--rex-text-field-theme-disabled-text, #898989);
+}
+.rex-text-field-ui > div input.disabled::-webkit-input-placeholder,
+.rex-text-field-ui > div input[disabled]::-webkit-input-placeholder {
+  color: var(--rex-text-field-theme-disabled-placeholder, #898989);
+}
+.rex-text-field-ui > div input.disabled:-moz-placeholder,
+.rex-text-field-ui > div input.disabled::-moz-placeholder,
+.rex-text-field-ui > div input[disabled]:-moz-placeholder,
+.rex-text-field-ui > div input[disabled]::-moz-placeholder {
+  color: var(--rex-text-field-theme-disabled-placeholder, #898989);
+}
+.rex-text-field-ui > div input.disabled:-ms-input-placeholder,
+.rex-text-field-ui > div input[disabled]:-ms-input-placeholder {
+  color: var(--rex-text-field-theme-disabled-placeholder, #898989);
+}
+.rex-text-field-ui > div input.error:not([disabled]) {
+  color: var(--rex-text-field-theme-error-text, #333);
+}
+.rex-text-field-ui
+  > div
+  input.error:not([disabled])::-webkit-input-placeholder {
+  color: var(--rex-text-field-theme-error-placeholder, #898989);
+}
+.rex-text-field-ui > div input.error:not([disabled]):-moz-placeholder,
+.rex-text-field-ui > div input.error:not([disabled])::-moz-placeholder {
+  color: var(--rex-text-field-theme-error-placeholder, #898989);
+}
+.rex-text-field-ui > div input.error:not([disabled]):-ms-input-placeholder {
+  color: var(--rex-text-field-theme-error-placeholder, #898989);
+}
+.rex-text-field-ui > div input.valid:not([disabled]) {
+  color: var(--rex-text-field-theme-valid-text, #333);
+}
+.rex-text-field-ui
+  > div
+  input.valid:not([disabled])::-webkit-input-placeholder {
+  color: var(--rex-text-field-theme-valid-placeholder, #898989);
+}
+.rex-text-field-ui > div input.valid:not([disabled]):-moz-placeholder,
+.rex-text-field-ui > div input.valid:not([disabled])::-moz-placeholder {
+  color: var(--rex-text-field-theme-valid-placeholder, #898989);
+}
+.rex-text-field-ui > div input.valid:not([disabled]):-ms-input-placeholder {
+  color: var(--rex-text-field-theme-valid-placeholder, #898989);
+}
+.rex-text-field-ui > div svg {
+  overflow: unset;
+  padding-bottom: 0.1875rem;
+}
+.rex-text-field-helper small {
+  margin-top: 0.5rem;
+  padding-left: 0.75rem;
+}
+.rex-text-field-helper.hover:not(.disabled)
+  > div:not(.disabled):not(.active):not(.error):not(.valid),
+.rex-text-field-helper:hover:not(.disabled)
+  > div:not(.disabled):not(.active):not(.error):not(.valid) {
+  border-color: var(--rex-text-field-theme-hover-border, #1364ff);
+}
+.rex-text-field-helper.hover:not(.disabled)
+  > div:not(.disabled):not(.active):not(.error):not(.valid)
+  input,
+.rex-text-field-helper:hover:not(.disabled)
+  > div:not(.disabled):not(.active):not(.error):not(.valid)
+  input {
+  color: var(--rex-text-field-theme-hover-text, #333);
+}
+.rex-text-field-helper.hover:not(.disabled)
+  > div:not(.disabled):not(.active):not(.error):not(.valid)
+  input::-webkit-input-placeholder,
+.rex-text-field-helper:hover:not(.disabled)
+  > div:not(.disabled):not(.active):not(.error):not(.valid)
+  input::-webkit-input-placeholder {
+  color: var(--rex-text-field-theme-hover-placeholder, #606060);
+}
+.rex-text-field-helper.hover:not(.disabled)
+  > div:not(.disabled):not(.active):not(.error):not(.valid)
+  input:-moz-placeholder,
+.rex-text-field-helper.hover:not(.disabled)
+  > div:not(.disabled):not(.active):not(.error):not(.valid)
+  input::-moz-placeholder,
+.rex-text-field-helper:hover:not(.disabled)
+  > div:not(.disabled):not(.active):not(.error):not(.valid)
+  input:-moz-placeholder,
+.rex-text-field-helper:hover:not(.disabled)
+  > div:not(.disabled):not(.active):not(.error):not(.valid)
+  input::-moz-placeholder {
+  color: var(--rex-text-field-theme-hover-placeholder, #606060);
+}
+.rex-text-field-helper.hover:not(.disabled)
+  > div:not(.disabled):not(.active):not(.error):not(.valid)
+  input:-ms-input-placeholder,
+.rex-text-field-helper:hover:not(.disabled)
+  > div:not(.disabled):not(.active):not(.error):not(.valid)
+  input:-ms-input-placeholder {
+  color: var(--rex-text-field-theme-hover-placeholder, #606060);
+}
+.rex-text-field-helper.hover:not(.disabled)
+  small:not(.disabled):not(.active):not(.error):not(.valid),
+.rex-text-field-helper:hover:not(.disabled)
+  small:not(.disabled):not(.active):not(.error):not(.valid) {
+  color: var(--rex-text-field-helper-theme-hover-text, #606060);
+}
+.rex-text-field-helper.hover:not(.disabled)
+  small:not(.disabled):not(.active):not(.error):not(.valid).focus,
+.rex-text-field-helper:hover:not(.disabled)
+  small:not(.disabled):not(.active):not(.error):not(.valid).focus {
+  color: var(--rex-text-field-helper-theme-active-text, #606060);
+}
+
+/*!
+ * 
+ * @license @rakuten-rex/text-field v1.5.0 2020-09-07
+ * TextFieldLabel/TextFieldLabel.development.css
+ * 
+ * Copyright (c) 2018-present, Rakuten, Inc.
+ * 
+ * This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.
+ */
+.rex-text-field-label-ui {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  background-color: inherit;
+  color: var(--rex-text-field-label-theme-text, #606060);
+  display: block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 0.875rem;
+  line-height: 1.5;
+  text-align: left;
+  transition: color 0.15s ease-in-out;
+}
+.rex-text-field-label-ui,
+.rex-text-field-label-ui:after,
+.rex-text-field-label-ui:before {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.rex-text-field-label-ui.hover {
+  color: var(--rex-text-field-label-theme-hover-text, #1364ff);
+}
+.rex-text-field-label-ui.error {
+  color: var(--rex-text-field-label-theme-error-text, #df0101);
+}
+.rex-text-field-label-ui.valid {
+  color: var(--rex-text-field-label-theme-valid-text, #606060);
+}
+.rex-text-field-label-ui.active:not(.disabled):not(.error):not(.valid),
+.rex-text-field-label-ui:active:not(.disabled):not(.error):not(.valid) {
+  color: var(--rex-text-field-label-theme-active-text, #1364ff);
+}
+.rex-text-field-label-ui.focus,
+.rex-text-field-label-ui:focus {
+  outline: none;
+}
+.rex-text-field-label-ui.disabled {
+  color: var(--rex-text-field-label-theme-disabled-text, #898989);
+}
+.rex-text-field-ui {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  background-color: #fff;
+  border: 1px solid var(--rex-text-field-theme-border, #606060);
+  border-radius: 0.32rem;
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 0;
+  text-align: left;
+  transition: border-color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+.rex-text-field-ui,
+.rex-text-field-ui:after,
+.rex-text-field-ui:before {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.rex-text-field-ui.hover {
+  border-color: var(--rex-text-field-theme-hover-border, #1364ff);
+}
+.rex-text-field-ui.hover input::-webkit-input-placeholder {
+  color: var(--rex-text-field-theme-hover-placeholder, #606060);
+}
+.rex-text-field-ui.hover input:-moz-placeholder,
+.rex-text-field-ui.hover input::-moz-placeholder {
+  color: var(--rex-text-field-theme-hover-placeholder, #606060);
+}
+.rex-text-field-ui.hover input:-ms-input-placeholder {
+  color: var(--rex-text-field-theme-hover-placeholder, #606060);
+}
+.rex-text-field-ui.active:not(.disabled):not(.error):not(.valid),
+.rex-text-field-ui.focus:not(.disabled):not(.error):not(.valid),
+.rex-text-field-ui:active:not(.disabled):not(.error):not(.valid),
+.rex-text-field-ui:focus:not(.disabled):not(.error):not(.valid) {
+  background-color: var(--rex-text-field-theme-active-border, #1364ff);
+  border-color: var(--rex-text-field-theme-active-border, #1364ff);
+  outline: none;
+}
+.rex-text-field-ui.disabled {
+  border-color: var(--rex-text-field-theme-disabled-border, #dfdfdf);
+}
+.rex-text-field-ui.error:not(.disabled) {
+  border-color: var(--rex-text-field-theme-error-border, #df0101);
+}
+.rex-text-field-ui.error svg path {
+  fill: var(--rex-text-field-theme-error-icon-color, #df0101);
+}
+.rex-text-field-ui.valid:not(.disabled) {
+  border-color: var(--rex-text-field-theme-valid-border, #606060);
+}
+.rex-text-field-ui.valid svg path {
+  fill: var(--rex-text-field-theme-valid-icon-color, #606060);
+}
+.rex-text-field-ui > div {
+  align-items: flex-end;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  display: flex;
+  padding: 0.375rem 0.6875rem 0.375rem 0.625rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
+}
+.rex-text-field-ui > div.active:not(.error):not(.valid) {
+  border: 1px solid var(--rex-text-field-theme-active-border, #1364ff);
+}
+.rex-text-field-ui > div input {
+  -webkit-font-smoothing: antialiased;
+  background-clip: padding-box;
+  border: none;
+  box-sizing: border-box;
+  color: var(--rex-text-field-theme-text, #333);
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+  outline: none;
+  padding: 0 1rem 0 0;
+  transition: color 0.15s ease-in-out;
+  width: 100%;
+}
+.rex-text-field-ui > div input::-webkit-input-placeholder {
+  color: var(--rex-text-field-theme-placeholder, #717171);
+  transition: color 0.15s ease-in-out;
+}
+.rex-text-field-ui > div input:-moz-placeholder,
+.rex-text-field-ui > div input::-moz-placeholder {
+  color: var(--rex-text-field-theme-placeholder, #717171);
+  transition: color 0.15s ease-in-out;
+}
+.rex-text-field-ui > div input:-ms-input-placeholder {
+  color: var(--rex-text-field-theme-placeholder, #717171);
+  transition: color 0.15s ease-in-out;
+}
+.rex-text-field-ui > div input.active:not([disabled]):not(.error):not(.valid),
+.rex-text-field-ui > div input.focus:not([disabled]):not(.error):not(.valid),
+.rex-text-field-ui > div input:active:not([disabled]):not(.error):not(.valid),
+.rex-text-field-ui > div input:focus:not([disabled]):not(.error):not(.valid) {
+  color: var(--rex-text-field-theme-active-text, #333);
+}
+.rex-text-field-ui
+  > div
+  input.active:not([disabled]):not(.error):not(.valid)::-webkit-input-placeholder,
+.rex-text-field-ui
+  > div
+  input.focus:not([disabled]):not(.error):not(.valid)::-webkit-input-placeholder,
+.rex-text-field-ui
+  > div
+  input:active:not([disabled]):not(.error):not(.valid)::-webkit-input-placeholder,
+.rex-text-field-ui
+  > div
+  input:focus:not([disabled]):not(.error):not(.valid)::-webkit-input-placeholder {
+  color: var(--rex-text-field-theme-active-placeholder, #606060);
+}
+.rex-text-field-ui
+  > div
+  input.active:not([disabled]):not(.error):not(.valid):-moz-placeholder,
+.rex-text-field-ui
+  > div
+  input.active:not([disabled]):not(.error):not(.valid)::-moz-placeholder,
+.rex-text-field-ui
+  > div
+  input.focus:not([disabled]):not(.error):not(.valid):-moz-placeholder,
+.rex-text-field-ui
+  > div
+  input.focus:not([disabled]):not(.error):not(.valid)::-moz-placeholder,
+.rex-text-field-ui
+  > div
+  input:active:not([disabled]):not(.error):not(.valid):-moz-placeholder,
+.rex-text-field-ui
+  > div
+  input:active:not([disabled]):not(.error):not(.valid)::-moz-placeholder,
+.rex-text-field-ui
+  > div
+  input:focus:not([disabled]):not(.error):not(.valid):-moz-placeholder,
+.rex-text-field-ui
+  > div
+  input:focus:not([disabled]):not(.error):not(.valid)::-moz-placeholder {
+  color: var(--rex-text-field-theme-active-placeholder, #606060);
+}
+.rex-text-field-ui
+  > div
+  input.active:not([disabled]):not(.error):not(.valid):-ms-input-placeholder,
+.rex-text-field-ui
+  > div
+  input.focus:not([disabled]):not(.error):not(.valid):-ms-input-placeholder,
+.rex-text-field-ui
+  > div
+  input:active:not([disabled]):not(.error):not(.valid):-ms-input-placeholder,
+.rex-text-field-ui
+  > div
+  input:focus:not([disabled]):not(.error):not(.valid):-ms-input-placeholder {
+  color: var(--rex-text-field-theme-active-placeholder, #606060);
+}
+.rex-text-field-ui > div input.disabled,
+.rex-text-field-ui > div input[disabled] {
+  color: var(--rex-text-field-theme-disabled-text, #898989);
+}
+.rex-text-field-ui > div input.disabled::-webkit-input-placeholder,
+.rex-text-field-ui > div input[disabled]::-webkit-input-placeholder {
+  color: var(--rex-text-field-theme-disabled-placeholder, #898989);
+}
+.rex-text-field-ui > div input.disabled:-moz-placeholder,
+.rex-text-field-ui > div input.disabled::-moz-placeholder,
+.rex-text-field-ui > div input[disabled]:-moz-placeholder,
+.rex-text-field-ui > div input[disabled]::-moz-placeholder {
+  color: var(--rex-text-field-theme-disabled-placeholder, #898989);
+}
+.rex-text-field-ui > div input.disabled:-ms-input-placeholder,
+.rex-text-field-ui > div input[disabled]:-ms-input-placeholder {
+  color: var(--rex-text-field-theme-disabled-placeholder, #898989);
+}
+.rex-text-field-ui > div input.error:not([disabled]) {
+  color: var(--rex-text-field-theme-error-text, #333);
+}
+.rex-text-field-ui
+  > div
+  input.error:not([disabled])::-webkit-input-placeholder {
+  color: var(--rex-text-field-theme-error-placeholder, #898989);
+}
+.rex-text-field-ui > div input.error:not([disabled]):-moz-placeholder,
+.rex-text-field-ui > div input.error:not([disabled])::-moz-placeholder {
+  color: var(--rex-text-field-theme-error-placeholder, #898989);
+}
+.rex-text-field-ui > div input.error:not([disabled]):-ms-input-placeholder {
+  color: var(--rex-text-field-theme-error-placeholder, #898989);
+}
+.rex-text-field-ui > div input.valid:not([disabled]) {
+  color: var(--rex-text-field-theme-valid-text, #333);
+}
+.rex-text-field-ui
+  > div
+  input.valid:not([disabled])::-webkit-input-placeholder {
+  color: var(--rex-text-field-theme-valid-placeholder, #898989);
+}
+.rex-text-field-ui > div input.valid:not([disabled]):-moz-placeholder,
+.rex-text-field-ui > div input.valid:not([disabled])::-moz-placeholder {
+  color: var(--rex-text-field-theme-valid-placeholder, #898989);
+}
+.rex-text-field-ui > div input.valid:not([disabled]):-ms-input-placeholder {
+  color: var(--rex-text-field-theme-valid-placeholder, #898989);
+}
+.rex-text-field-ui > div svg {
+  overflow: unset;
+  padding-bottom: 0.1875rem;
+}
+.rex-text-field-label label {
+  margin-bottom: 0.5rem;
+  padding-left: 0.75rem;
+}
+.rex-text-field-label.hover:not(.disabled)
+  > div:not(.disabled):not(.active):not(.error):not(.valid),
+.rex-text-field-label:hover:not(.disabled)
+  > div:not(.disabled):not(.active):not(.error):not(.valid) {
+  border-color: var(--rex-text-field-theme-hover-border, #1364ff);
+}
+.rex-text-field-label.hover:not(.disabled)
+  > div:not(.disabled):not(.active):not(.error):not(.valid)
+  input,
+.rex-text-field-label:hover:not(.disabled)
+  > div:not(.disabled):not(.active):not(.error):not(.valid)
+  input {
+  color: var(--rex-text-field-theme-hover-text, #333);
+}
+.rex-text-field-label.hover:not(.disabled)
+  > div:not(.disabled):not(.active):not(.error):not(.valid)
+  input::-webkit-input-placeholder,
+.rex-text-field-label:hover:not(.disabled)
+  > div:not(.disabled):not(.active):not(.error):not(.valid)
+  input::-webkit-input-placeholder {
+  color: var(--rex-text-field-theme-hover-placeholder, #606060);
+}
+.rex-text-field-label.hover:not(.disabled)
+  > div:not(.disabled):not(.active):not(.error):not(.valid)
+  input:-moz-placeholder,
+.rex-text-field-label.hover:not(.disabled)
+  > div:not(.disabled):not(.active):not(.error):not(.valid)
+  input::-moz-placeholder,
+.rex-text-field-label:hover:not(.disabled)
+  > div:not(.disabled):not(.active):not(.error):not(.valid)
+  input:-moz-placeholder,
+.rex-text-field-label:hover:not(.disabled)
+  > div:not(.disabled):not(.active):not(.error):not(.valid)
+  input::-moz-placeholder {
+  color: var(--rex-text-field-theme-hover-placeholder, #606060);
+}
+.rex-text-field-label.hover:not(.disabled)
+  > div:not(.disabled):not(.active):not(.error):not(.valid)
+  input:-ms-input-placeholder,
+.rex-text-field-label:hover:not(.disabled)
+  > div:not(.disabled):not(.active):not(.error):not(.valid)
+  input:-ms-input-placeholder {
+  color: var(--rex-text-field-theme-hover-placeholder, #606060);
+}
+.rex-text-field-label.hover:not(.disabled)
+  label:not(.disabled):not(.active):not(.error):not(.valid),
+.rex-text-field-label:hover:not(.disabled)
+  label:not(.disabled):not(.active):not(.error):not(.valid) {
+  color: var(--rex-text-field-label-theme-hover-text, #1364ff);
+}
+.rex-text-field-label.hover:not(.disabled)
+  label:not(.disabled):not(.active):not(.error):not(.valid).focus,
+.rex-text-field-label:hover:not(.disabled)
+  label:not(.disabled):not(.active):not(.error):not(.valid).focus {
+  color: var(--rex-text-field-label-theme-active-text, #1364ff);
+}
+
+/*!
+ * 
+ * @license @rakuten-rex/text-field v1.5.0 2020-09-07
+ * TextFieldLabelHelper/TextFieldLabelHelper.development.css
+ * 
+ * Copyright (c) 2018-present, Rakuten, Inc.
+ * 
+ * This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.
+ */
+.rex-text-field-label-ui {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  background-color: inherit;
+  color: var(--rex-text-field-label-theme-text, #606060);
+  display: block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 0.875rem;
+  line-height: 1.5;
+  text-align: left;
+  transition: color 0.15s ease-in-out;
+}
+.rex-text-field-label-ui,
+.rex-text-field-label-ui:after,
+.rex-text-field-label-ui:before {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.rex-text-field-label-ui.hover {
+  color: var(--rex-text-field-label-theme-hover-text, #1364ff);
+}
+.rex-text-field-label-ui.error {
+  color: var(--rex-text-field-label-theme-error-text, #df0101);
+}
+.rex-text-field-label-ui.valid {
+  color: var(--rex-text-field-label-theme-valid-text, #606060);
+}
+.rex-text-field-label-ui.active:not(.disabled):not(.error):not(.valid),
+.rex-text-field-label-ui:active:not(.disabled):not(.error):not(.valid) {
+  color: var(--rex-text-field-label-theme-active-text, #1364ff);
+}
+.rex-text-field-label-ui.focus,
+.rex-text-field-label-ui:focus {
+  outline: none;
+}
+.rex-text-field-label-ui.disabled {
+  color: var(--rex-text-field-label-theme-disabled-text, #898989);
+}
+.rex-text-field-helper-ui {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  background-color: inherit;
+  color: var(--rex-text-field-helper-theme-text, #606060);
+  display: block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 0.875rem;
+  line-height: 1.5;
+  position: relative;
+  text-align: left;
+  transition: color 0.15s ease-in-out;
+}
+.rex-text-field-helper-ui,
+.rex-text-field-helper-ui:after,
+.rex-text-field-helper-ui:before {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.rex-text-field-helper-ui svg path {
+  transition: fill 0.15s ease-in-out;
+}
+.rex-text-field-helper-ui.hover {
+  color: var(--rex-text-field-helper-theme-hover-text, #606060);
+}
+.rex-text-field-helper-ui.error {
+  align-items: center;
+  color: var(--rex-text-field-helper-theme-error-text, #df0101);
+  display: flex;
+}
+.rex-text-field-helper-ui.error svg {
+  font-size: 0.875rem;
+  margin-right: 0.5rem;
+}
+.rex-text-field-helper-ui.error svg path {
+  fill: var(--rex-text-field-helper-theme-error-text, #df0101);
+}
+.rex-text-field-helper-ui.valid {
+  align-items: center;
+  color: var(--rex-text-field-helper-theme-valid-text, #047205);
+  display: flex;
+}
+.rex-text-field-helper-ui.valid svg {
+  font-size: 0.875rem;
+  margin-right: 0.5rem;
+}
+.rex-text-field-helper-ui.valid svg path {
+  fill: var(--rex-text-field-helper-theme-valid-text, #047205);
+}
+.rex-text-field-helper-ui.active:not(.disabled):not(.error):not(.valid),
+.rex-text-field-helper-ui:active:not(.disabled):not(.error):not(.valid) {
+  color: var(--rex-text-field-helper-theme-active-text, #606060);
+}
+.rex-text-field-helper-ui.focus,
+.rex-text-field-helper-ui:focus {
+  outline: none;
+}
+.rex-text-field-helper-ui.disabled {
+  color: var(--rex-text-field-helper-theme-disabled-text, #898989);
+}
+.rex-text-field-helper-ui.disabled svg path {
+  fill: var(--rex-text-field-helper-theme-disabled-text, #898989);
+}
+.rex-text-field-ui {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  background-color: #fff;
+  border: 1px solid var(--rex-text-field-theme-border, #606060);
+  border-radius: 0.32rem;
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 0;
+  text-align: left;
+  transition: border-color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+.rex-text-field-ui,
+.rex-text-field-ui:after,
+.rex-text-field-ui:before {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.rex-text-field-ui.hover {
+  border-color: var(--rex-text-field-theme-hover-border, #1364ff);
+}
+.rex-text-field-ui.hover input::-webkit-input-placeholder {
+  color: var(--rex-text-field-theme-hover-placeholder, #606060);
+}
+.rex-text-field-ui.hover input:-moz-placeholder,
+.rex-text-field-ui.hover input::-moz-placeholder {
+  color: var(--rex-text-field-theme-hover-placeholder, #606060);
+}
+.rex-text-field-ui.hover input:-ms-input-placeholder {
+  color: var(--rex-text-field-theme-hover-placeholder, #606060);
+}
+.rex-text-field-ui.active:not(.disabled):not(.error):not(.valid),
+.rex-text-field-ui.focus:not(.disabled):not(.error):not(.valid),
+.rex-text-field-ui:active:not(.disabled):not(.error):not(.valid),
+.rex-text-field-ui:focus:not(.disabled):not(.error):not(.valid) {
+  background-color: var(--rex-text-field-theme-active-border, #1364ff);
+  border-color: var(--rex-text-field-theme-active-border, #1364ff);
+  outline: none;
+}
+.rex-text-field-ui.disabled {
+  border-color: var(--rex-text-field-theme-disabled-border, #dfdfdf);
+}
+.rex-text-field-ui.error:not(.disabled) {
+  border-color: var(--rex-text-field-theme-error-border, #df0101);
+}
+.rex-text-field-ui.error svg path {
+  fill: var(--rex-text-field-theme-error-icon-color, #df0101);
+}
+.rex-text-field-ui.valid:not(.disabled) {
+  border-color: var(--rex-text-field-theme-valid-border, #606060);
+}
+.rex-text-field-ui.valid svg path {
+  fill: var(--rex-text-field-theme-valid-icon-color, #606060);
+}
+.rex-text-field-ui > div {
+  align-items: flex-end;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  display: flex;
+  padding: 0.375rem 0.6875rem 0.375rem 0.625rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
+}
+.rex-text-field-ui > div.active:not(.error):not(.valid) {
+  border: 1px solid var(--rex-text-field-theme-active-border, #1364ff);
+}
+.rex-text-field-ui > div input {
+  -webkit-font-smoothing: antialiased;
+  background-clip: padding-box;
+  border: none;
+  box-sizing: border-box;
+  color: var(--rex-text-field-theme-text, #333);
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+  outline: none;
+  padding: 0 1rem 0 0;
+  transition: color 0.15s ease-in-out;
+  width: 100%;
+}
+.rex-text-field-ui > div input::-webkit-input-placeholder {
+  color: var(--rex-text-field-theme-placeholder, #717171);
+  transition: color 0.15s ease-in-out;
+}
+.rex-text-field-ui > div input:-moz-placeholder,
+.rex-text-field-ui > div input::-moz-placeholder {
+  color: var(--rex-text-field-theme-placeholder, #717171);
+  transition: color 0.15s ease-in-out;
+}
+.rex-text-field-ui > div input:-ms-input-placeholder {
+  color: var(--rex-text-field-theme-placeholder, #717171);
+  transition: color 0.15s ease-in-out;
+}
+.rex-text-field-ui > div input.active:not([disabled]):not(.error):not(.valid),
+.rex-text-field-ui > div input.focus:not([disabled]):not(.error):not(.valid),
+.rex-text-field-ui > div input:active:not([disabled]):not(.error):not(.valid),
+.rex-text-field-ui > div input:focus:not([disabled]):not(.error):not(.valid) {
+  color: var(--rex-text-field-theme-active-text, #333);
+}
+.rex-text-field-ui
+  > div
+  input.active:not([disabled]):not(.error):not(.valid)::-webkit-input-placeholder,
+.rex-text-field-ui
+  > div
+  input.focus:not([disabled]):not(.error):not(.valid)::-webkit-input-placeholder,
+.rex-text-field-ui
+  > div
+  input:active:not([disabled]):not(.error):not(.valid)::-webkit-input-placeholder,
+.rex-text-field-ui
+  > div
+  input:focus:not([disabled]):not(.error):not(.valid)::-webkit-input-placeholder {
+  color: var(--rex-text-field-theme-active-placeholder, #606060);
+}
+.rex-text-field-ui
+  > div
+  input.active:not([disabled]):not(.error):not(.valid):-moz-placeholder,
+.rex-text-field-ui
+  > div
+  input.active:not([disabled]):not(.error):not(.valid)::-moz-placeholder,
+.rex-text-field-ui
+  > div
+  input.focus:not([disabled]):not(.error):not(.valid):-moz-placeholder,
+.rex-text-field-ui
+  > div
+  input.focus:not([disabled]):not(.error):not(.valid)::-moz-placeholder,
+.rex-text-field-ui
+  > div
+  input:active:not([disabled]):not(.error):not(.valid):-moz-placeholder,
+.rex-text-field-ui
+  > div
+  input:active:not([disabled]):not(.error):not(.valid)::-moz-placeholder,
+.rex-text-field-ui
+  > div
+  input:focus:not([disabled]):not(.error):not(.valid):-moz-placeholder,
+.rex-text-field-ui
+  > div
+  input:focus:not([disabled]):not(.error):not(.valid)::-moz-placeholder {
+  color: var(--rex-text-field-theme-active-placeholder, #606060);
+}
+.rex-text-field-ui
+  > div
+  input.active:not([disabled]):not(.error):not(.valid):-ms-input-placeholder,
+.rex-text-field-ui
+  > div
+  input.focus:not([disabled]):not(.error):not(.valid):-ms-input-placeholder,
+.rex-text-field-ui
+  > div
+  input:active:not([disabled]):not(.error):not(.valid):-ms-input-placeholder,
+.rex-text-field-ui
+  > div
+  input:focus:not([disabled]):not(.error):not(.valid):-ms-input-placeholder {
+  color: var(--rex-text-field-theme-active-placeholder, #606060);
+}
+.rex-text-field-ui > div input.disabled,
+.rex-text-field-ui > div input[disabled] {
+  color: var(--rex-text-field-theme-disabled-text, #898989);
+}
+.rex-text-field-ui > div input.disabled::-webkit-input-placeholder,
+.rex-text-field-ui > div input[disabled]::-webkit-input-placeholder {
+  color: var(--rex-text-field-theme-disabled-placeholder, #898989);
+}
+.rex-text-field-ui > div input.disabled:-moz-placeholder,
+.rex-text-field-ui > div input.disabled::-moz-placeholder,
+.rex-text-field-ui > div input[disabled]:-moz-placeholder,
+.rex-text-field-ui > div input[disabled]::-moz-placeholder {
+  color: var(--rex-text-field-theme-disabled-placeholder, #898989);
+}
+.rex-text-field-ui > div input.disabled:-ms-input-placeholder,
+.rex-text-field-ui > div input[disabled]:-ms-input-placeholder {
+  color: var(--rex-text-field-theme-disabled-placeholder, #898989);
+}
+.rex-text-field-ui > div input.error:not([disabled]) {
+  color: var(--rex-text-field-theme-error-text, #333);
+}
+.rex-text-field-ui
+  > div
+  input.error:not([disabled])::-webkit-input-placeholder {
+  color: var(--rex-text-field-theme-error-placeholder, #898989);
+}
+.rex-text-field-ui > div input.error:not([disabled]):-moz-placeholder,
+.rex-text-field-ui > div input.error:not([disabled])::-moz-placeholder {
+  color: var(--rex-text-field-theme-error-placeholder, #898989);
+}
+.rex-text-field-ui > div input.error:not([disabled]):-ms-input-placeholder {
+  color: var(--rex-text-field-theme-error-placeholder, #898989);
+}
+.rex-text-field-ui > div input.valid:not([disabled]) {
+  color: var(--rex-text-field-theme-valid-text, #333);
+}
+.rex-text-field-ui
+  > div
+  input.valid:not([disabled])::-webkit-input-placeholder {
+  color: var(--rex-text-field-theme-valid-placeholder, #898989);
+}
+.rex-text-field-ui > div input.valid:not([disabled]):-moz-placeholder,
+.rex-text-field-ui > div input.valid:not([disabled])::-moz-placeholder {
+  color: var(--rex-text-field-theme-valid-placeholder, #898989);
+}
+.rex-text-field-ui > div input.valid:not([disabled]):-ms-input-placeholder {
+  color: var(--rex-text-field-theme-valid-placeholder, #898989);
+}
+.rex-text-field-ui > div svg {
+  overflow: unset;
+  padding-bottom: 0.1875rem;
+}
+.rex-text-field-label-helper label {
+  margin-bottom: 0.5rem;
+  padding-left: 0.75rem;
+}
+.rex-text-field-label-helper small {
+  margin-top: 0.5rem;
+  padding-left: 0.75rem;
+}
+.rex-text-field-label-helper.hover:not(.disabled)
+  > div:not(.disabled):not(.active):not(.error):not(.valid),
+.rex-text-field-label-helper:hover:not(.disabled)
+  > div:not(.disabled):not(.active):not(.error):not(.valid) {
+  border-color: var(--rex-text-field-theme-hover-border, #1364ff);
+}
+.rex-text-field-label-helper.hover:not(.disabled)
+  > div:not(.disabled):not(.active):not(.error):not(.valid)
+  input,
+.rex-text-field-label-helper:hover:not(.disabled)
+  > div:not(.disabled):not(.active):not(.error):not(.valid)
+  input {
+  color: var(--rex-text-field-theme-hover-text, #333);
+}
+.rex-text-field-label-helper.hover:not(.disabled)
+  > div:not(.disabled):not(.active):not(.error):not(.valid)
+  input::-webkit-input-placeholder,
+.rex-text-field-label-helper:hover:not(.disabled)
+  > div:not(.disabled):not(.active):not(.error):not(.valid)
+  input::-webkit-input-placeholder {
+  color: var(--rex-text-field-theme-hover-placeholder, #606060);
+}
+.rex-text-field-label-helper.hover:not(.disabled)
+  > div:not(.disabled):not(.active):not(.error):not(.valid)
+  input:-moz-placeholder,
+.rex-text-field-label-helper.hover:not(.disabled)
+  > div:not(.disabled):not(.active):not(.error):not(.valid)
+  input::-moz-placeholder,
+.rex-text-field-label-helper:hover:not(.disabled)
+  > div:not(.disabled):not(.active):not(.error):not(.valid)
+  input:-moz-placeholder,
+.rex-text-field-label-helper:hover:not(.disabled)
+  > div:not(.disabled):not(.active):not(.error):not(.valid)
+  input::-moz-placeholder {
+  color: var(--rex-text-field-theme-hover-placeholder, #606060);
+}
+.rex-text-field-label-helper.hover:not(.disabled)
+  > div:not(.disabled):not(.active):not(.error):not(.valid)
+  input:-ms-input-placeholder,
+.rex-text-field-label-helper:hover:not(.disabled)
+  > div:not(.disabled):not(.active):not(.error):not(.valid)
+  input:-ms-input-placeholder {
+  color: var(--rex-text-field-theme-hover-placeholder, #606060);
+}
+.rex-text-field-label-helper.hover:not(.disabled)
+  label:not(.disabled):not(.active):not(.error):not(.valid),
+.rex-text-field-label-helper:hover:not(.disabled)
+  label:not(.disabled):not(.active):not(.error):not(.valid) {
+  color: var(--rex-text-field-label-theme-hover-text, #1364ff);
+}
+.rex-text-field-label-helper.hover:not(.disabled)
+  label:not(.disabled):not(.active):not(.error):not(.valid).focus,
+.rex-text-field-label-helper:hover:not(.disabled)
+  label:not(.disabled):not(.active):not(.error):not(.valid).focus {
+  color: var(--rex-text-field-label-theme-active-text, #1364ff);
+}
+.rex-text-field-label-helper.hover:not(.disabled)
+  small:not(.disabled):not(.active):not(.error):not(.valid),
+.rex-text-field-label-helper:hover:not(.disabled)
+  small:not(.disabled):not(.active):not(.error):not(.valid) {
+  color: var(--rex-text-field-helper-theme-hover-text, #606060);
+}
+.rex-text-field-label-helper.hover:not(.disabled)
+  small:not(.disabled):not(.active):not(.error):not(.valid).focus,
+.rex-text-field-label-helper:hover:not(.disabled)
+  small:not(.disabled):not(.active):not(.error):not(.valid).focus {
+  color: var(--rex-text-field-helper-theme-active-text, #606060);
+}
+
+/*!
+ * 
+ * @license @rakuten-rex/text-field v1.5.0 2020-09-07
+ * TextFieldUi/TextFieldUi.development.css
+ * 
+ * Copyright (c) 2018-present, Rakuten, Inc.
+ * 
+ * This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.
+ */
+.rex-text-field-ui {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  background-color: #fff;
+  border: 1px solid var(--rex-text-field-theme-border, #606060);
+  border-radius: 0.32rem;
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 0;
+  text-align: left;
+  transition: border-color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+.rex-text-field-ui,
+.rex-text-field-ui:after,
+.rex-text-field-ui:before {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.rex-text-field-ui.hover {
+  border-color: var(--rex-text-field-theme-hover-border, #1364ff);
+}
+.rex-text-field-ui.hover input::-webkit-input-placeholder {
+  color: var(--rex-text-field-theme-hover-placeholder, #606060);
+}
+.rex-text-field-ui.hover input:-moz-placeholder,
+.rex-text-field-ui.hover input::-moz-placeholder {
+  color: var(--rex-text-field-theme-hover-placeholder, #606060);
+}
+.rex-text-field-ui.hover input:-ms-input-placeholder {
+  color: var(--rex-text-field-theme-hover-placeholder, #606060);
+}
+.rex-text-field-ui.active:not(.disabled):not(.error):not(.valid),
+.rex-text-field-ui.focus:not(.disabled):not(.error):not(.valid),
+.rex-text-field-ui:active:not(.disabled):not(.error):not(.valid),
+.rex-text-field-ui:focus:not(.disabled):not(.error):not(.valid) {
+  background-color: var(--rex-text-field-theme-active-border, #1364ff);
+  border-color: var(--rex-text-field-theme-active-border, #1364ff);
+  outline: none;
+}
+.rex-text-field-ui.disabled {
+  border-color: var(--rex-text-field-theme-disabled-border, #dfdfdf);
+}
+.rex-text-field-ui.error:not(.disabled) {
+  border-color: var(--rex-text-field-theme-error-border, #df0101);
+}
+.rex-text-field-ui.error svg path {
+  fill: var(--rex-text-field-theme-error-icon-color, #df0101);
+}
+.rex-text-field-ui.valid:not(.disabled) {
+  border-color: var(--rex-text-field-theme-valid-border, #606060);
+}
+.rex-text-field-ui.valid svg path {
+  fill: var(--rex-text-field-theme-valid-icon-color, #606060);
+}
+.rex-text-field-ui > div {
+  align-items: flex-end;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  display: flex;
+  padding: 0.375rem 0.6875rem 0.375rem 0.625rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
+}
+.rex-text-field-ui > div.active:not(.error):not(.valid) {
+  border: 1px solid var(--rex-text-field-theme-active-border, #1364ff);
+}
+.rex-text-field-ui > div input {
+  -webkit-font-smoothing: antialiased;
+  background-clip: padding-box;
+  border: none;
+  box-sizing: border-box;
+  color: var(--rex-text-field-theme-text, #333);
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+  outline: none;
+  padding: 0 1rem 0 0;
+  transition: color 0.15s ease-in-out;
+  width: 100%;
+}
+.rex-text-field-ui > div input::-webkit-input-placeholder {
+  color: var(--rex-text-field-theme-placeholder, #717171);
+  transition: color 0.15s ease-in-out;
+}
+.rex-text-field-ui > div input:-moz-placeholder,
+.rex-text-field-ui > div input::-moz-placeholder {
+  color: var(--rex-text-field-theme-placeholder, #717171);
+  transition: color 0.15s ease-in-out;
+}
+.rex-text-field-ui > div input:-ms-input-placeholder {
+  color: var(--rex-text-field-theme-placeholder, #717171);
+  transition: color 0.15s ease-in-out;
+}
+.rex-text-field-ui > div input.active:not([disabled]):not(.error):not(.valid),
+.rex-text-field-ui > div input.focus:not([disabled]):not(.error):not(.valid),
+.rex-text-field-ui > div input:active:not([disabled]):not(.error):not(.valid),
+.rex-text-field-ui > div input:focus:not([disabled]):not(.error):not(.valid) {
+  color: var(--rex-text-field-theme-active-text, #333);
+}
+.rex-text-field-ui
+  > div
+  input.active:not([disabled]):not(.error):not(.valid)::-webkit-input-placeholder,
+.rex-text-field-ui
+  > div
+  input.focus:not([disabled]):not(.error):not(.valid)::-webkit-input-placeholder,
+.rex-text-field-ui
+  > div
+  input:active:not([disabled]):not(.error):not(.valid)::-webkit-input-placeholder,
+.rex-text-field-ui
+  > div
+  input:focus:not([disabled]):not(.error):not(.valid)::-webkit-input-placeholder {
+  color: var(--rex-text-field-theme-active-placeholder, #606060);
+}
+.rex-text-field-ui
+  > div
+  input.active:not([disabled]):not(.error):not(.valid):-moz-placeholder,
+.rex-text-field-ui
+  > div
+  input.active:not([disabled]):not(.error):not(.valid)::-moz-placeholder,
+.rex-text-field-ui
+  > div
+  input.focus:not([disabled]):not(.error):not(.valid):-moz-placeholder,
+.rex-text-field-ui
+  > div
+  input.focus:not([disabled]):not(.error):not(.valid)::-moz-placeholder,
+.rex-text-field-ui
+  > div
+  input:active:not([disabled]):not(.error):not(.valid):-moz-placeholder,
+.rex-text-field-ui
+  > div
+  input:active:not([disabled]):not(.error):not(.valid)::-moz-placeholder,
+.rex-text-field-ui
+  > div
+  input:focus:not([disabled]):not(.error):not(.valid):-moz-placeholder,
+.rex-text-field-ui
+  > div
+  input:focus:not([disabled]):not(.error):not(.valid)::-moz-placeholder {
+  color: var(--rex-text-field-theme-active-placeholder, #606060);
+}
+.rex-text-field-ui
+  > div
+  input.active:not([disabled]):not(.error):not(.valid):-ms-input-placeholder,
+.rex-text-field-ui
+  > div
+  input.focus:not([disabled]):not(.error):not(.valid):-ms-input-placeholder,
+.rex-text-field-ui
+  > div
+  input:active:not([disabled]):not(.error):not(.valid):-ms-input-placeholder,
+.rex-text-field-ui
+  > div
+  input:focus:not([disabled]):not(.error):not(.valid):-ms-input-placeholder {
+  color: var(--rex-text-field-theme-active-placeholder, #606060);
+}
+.rex-text-field-ui > div input.disabled,
+.rex-text-field-ui > div input[disabled] {
+  color: var(--rex-text-field-theme-disabled-text, #898989);
+}
+.rex-text-field-ui > div input.disabled::-webkit-input-placeholder,
+.rex-text-field-ui > div input[disabled]::-webkit-input-placeholder {
+  color: var(--rex-text-field-theme-disabled-placeholder, #898989);
+}
+.rex-text-field-ui > div input.disabled:-moz-placeholder,
+.rex-text-field-ui > div input.disabled::-moz-placeholder,
+.rex-text-field-ui > div input[disabled]:-moz-placeholder,
+.rex-text-field-ui > div input[disabled]::-moz-placeholder {
+  color: var(--rex-text-field-theme-disabled-placeholder, #898989);
+}
+.rex-text-field-ui > div input.disabled:-ms-input-placeholder,
+.rex-text-field-ui > div input[disabled]:-ms-input-placeholder {
+  color: var(--rex-text-field-theme-disabled-placeholder, #898989);
+}
+.rex-text-field-ui > div input.error:not([disabled]) {
+  color: var(--rex-text-field-theme-error-text, #333);
+}
+.rex-text-field-ui
+  > div
+  input.error:not([disabled])::-webkit-input-placeholder {
+  color: var(--rex-text-field-theme-error-placeholder, #898989);
+}
+.rex-text-field-ui > div input.error:not([disabled]):-moz-placeholder,
+.rex-text-field-ui > div input.error:not([disabled])::-moz-placeholder {
+  color: var(--rex-text-field-theme-error-placeholder, #898989);
+}
+.rex-text-field-ui > div input.error:not([disabled]):-ms-input-placeholder {
+  color: var(--rex-text-field-theme-error-placeholder, #898989);
+}
+.rex-text-field-ui > div input.valid:not([disabled]) {
+  color: var(--rex-text-field-theme-valid-text, #333);
+}
+.rex-text-field-ui
+  > div
+  input.valid:not([disabled])::-webkit-input-placeholder {
+  color: var(--rex-text-field-theme-valid-placeholder, #898989);
+}
+.rex-text-field-ui > div input.valid:not([disabled]):-moz-placeholder,
+.rex-text-field-ui > div input.valid:not([disabled])::-moz-placeholder {
+  color: var(--rex-text-field-theme-valid-placeholder, #898989);
+}
+.rex-text-field-ui > div input.valid:not([disabled]):-ms-input-placeholder {
+  color: var(--rex-text-field-theme-valid-placeholder, #898989);
+}
+.rex-text-field-ui > div svg {
+  overflow: unset;
+  padding-bottom: 0.1875rem;
+}
+
+/*!
+ * 
+ * @license @rakuten-rex/textarea v1.4.0 2020-09-10
+ * TextareaLabelHelper/TextareaLabelHelper.development.css
+ * 
+ * Copyright (c) 2018-present, Rakuten, Inc.
+ * 
+ * This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.
+ */
+.rex-textarea-ui {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  background-clip: padding-box;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  color: var(--rex-textarea-theme-text, #333);
+  display: block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1rem;
+  height: auto;
+  line-height: 1.5;
+  margin: 0;
+  min-height: 4.75rem;
+  overflow: auto;
+  padding: 0.625rem;
+  resize: vertical;
+  text-align: left;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
+  width: 100%;
+}
+.rex-textarea-ui,
+.rex-textarea-ui:after,
+.rex-textarea-ui:before {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.rex-textarea-ui::-webkit-input-placeholder {
+  color: var(--rex-textarea-theme-placeholder, #717171);
+  transition: color 0.15s ease-in-out;
+}
+.rex-textarea-ui:-moz-placeholder,
+.rex-textarea-ui::-moz-placeholder {
+  color: var(--rex-textarea-theme-placeholder, #717171);
+  transition: color 0.15s ease-in-out;
+}
+.rex-textarea-ui:-ms-input-placeholder {
+  color: var(--rex-textarea-theme-placeholder, #717171);
+  transition: color 0.15s ease-in-out;
+}
+.rex-textarea-ui.hover {
+  color: var(--rex-textarea-theme-hover-text, #333);
+}
+.rex-textarea-ui.hover::-webkit-input-placeholder {
+  color: var(--rex-textarea-theme-hover-placeholder, #717171);
+}
+.rex-textarea-ui.hover:-moz-placeholder,
+.rex-textarea-ui.hover::-moz-placeholder {
+  color: var(--rex-textarea-theme-hover-placeholder, #717171);
+}
+.rex-textarea-ui.hover:-ms-input-placeholder {
+  color: var(--rex-textarea-theme-hover-placeholder, #717171);
+}
+.rex-textarea-ui.disabled,
+.rex-textarea-ui[disabled] {
+  color: var(--rex-textarea-theme-disabled-text, #898989);
+}
+.rex-textarea-ui.disabled::-webkit-input-placeholder,
+.rex-textarea-ui[disabled]::-webkit-input-placeholder {
+  color: var(--rex-textarea-theme-disabled-placeholder, #898989);
+}
+.rex-textarea-ui.disabled:-moz-placeholder,
+.rex-textarea-ui.disabled::-moz-placeholder,
+.rex-textarea-ui[disabled]:-moz-placeholder,
+.rex-textarea-ui[disabled]::-moz-placeholder {
+  color: var(--rex-textarea-theme-disabled-placeholder, #898989);
+}
+.rex-textarea-ui.disabled:-ms-input-placeholder,
+.rex-textarea-ui[disabled]:-ms-input-placeholder {
+  color: var(--rex-textarea-theme-disabled-placeholder, #898989);
+}
+.rex-textarea-ui.error:not(:active),
+.rex-textarea-ui.error:not(:focus) {
+  color: var(--rex-textarea-theme-error-text, #333);
+}
+.rex-textarea-ui.error:not(:active)::-webkit-input-placeholder,
+.rex-textarea-ui.error:not(:focus)::-webkit-input-placeholder {
+  color: var(--rex-textarea-theme-error-placeholder, #717171);
+}
+.rex-textarea-ui.error:not(:active):-moz-placeholder,
+.rex-textarea-ui.error:not(:active)::-moz-placeholder,
+.rex-textarea-ui.error:not(:focus):-moz-placeholder,
+.rex-textarea-ui.error:not(:focus)::-moz-placeholder {
+  color: var(--rex-textarea-theme-error-placeholder, #717171);
+}
+.rex-textarea-ui.error:not(:active):-ms-input-placeholder,
+.rex-textarea-ui.error:not(:focus):-ms-input-placeholder {
+  color: var(--rex-textarea-theme-error-placeholder, #717171);
+}
+.rex-textarea-ui.valid:not(:active),
+.rex-textarea-ui.valid:not(:focus) {
+  color: var(--rex-textarea-theme-valid-text, #333);
+}
+.rex-textarea-ui.valid:not(:active)::-webkit-input-placeholder,
+.rex-textarea-ui.valid:not(:focus)::-webkit-input-placeholder {
+  color: var(--rex-textarea-theme-valid-placeholder, #717171);
+}
+.rex-textarea-ui.valid:not(:active):-moz-placeholder,
+.rex-textarea-ui.valid:not(:active)::-moz-placeholder,
+.rex-textarea-ui.valid:not(:focus):-moz-placeholder,
+.rex-textarea-ui.valid:not(:focus)::-moz-placeholder {
+  color: var(--rex-textarea-theme-valid-placeholder, #717171);
+}
+.rex-textarea-ui.valid:not(:active):-ms-input-placeholder,
+.rex-textarea-ui.valid:not(:focus):-ms-input-placeholder {
+  color: var(--rex-textarea-theme-valid-placeholder, #717171);
+}
+.rex-textarea-ui.active,
+.rex-textarea-ui.focus,
+.rex-textarea-ui:active,
+.rex-textarea-ui:focus {
+  outline: none;
+}
+.rex-textarea-ui.active:not([disabled]):not(.error):not(.valid),
+.rex-textarea-ui.focus:not([disabled]):not(.error):not(.valid),
+.rex-textarea-ui:active:not([disabled]):not(.error):not(.valid),
+.rex-textarea-ui:focus:not([disabled]):not(.error):not(.valid) {
+  border-color: var(--rex-textarea-theme-active-border, #1364ff);
+  color: var(--rex-textarea-theme-active-text, #333);
+}
+.rex-textarea-ui.active:not([disabled]):not(.error):not(.valid)::-webkit-input-placeholder,
+.rex-textarea-ui.focus:not([disabled]):not(.error):not(.valid)::-webkit-input-placeholder,
+.rex-textarea-ui:active:not([disabled]):not(.error):not(.valid)::-webkit-input-placeholder,
+.rex-textarea-ui:focus:not([disabled]):not(.error):not(.valid)::-webkit-input-placeholder {
+  color: var(--rex-textarea-theme-active-placeholder, #606060);
+}
+.rex-textarea-ui.active:not([disabled]):not(.error):not(.valid):-moz-placeholder,
+.rex-textarea-ui.active:not([disabled]):not(.error):not(.valid)::-moz-placeholder,
+.rex-textarea-ui.focus:not([disabled]):not(.error):not(.valid):-moz-placeholder,
+.rex-textarea-ui.focus:not([disabled]):not(.error):not(.valid)::-moz-placeholder,
+.rex-textarea-ui:active:not([disabled]):not(.error):not(.valid):-moz-placeholder,
+.rex-textarea-ui:active:not([disabled]):not(.error):not(.valid)::-moz-placeholder,
+.rex-textarea-ui:focus:not([disabled]):not(.error):not(.valid):-moz-placeholder,
+.rex-textarea-ui:focus:not([disabled]):not(.error):not(.valid)::-moz-placeholder {
+  color: var(--rex-textarea-theme-active-placeholder, #606060);
+}
+.rex-textarea-ui.active:not([disabled]):not(.error):not(.valid):-ms-input-placeholder,
+.rex-textarea-ui.focus:not([disabled]):not(.error):not(.valid):-ms-input-placeholder,
+.rex-textarea-ui:active:not([disabled]):not(.error):not(.valid):-ms-input-placeholder,
+.rex-textarea-ui:focus:not([disabled]):not(.error):not(.valid):-ms-input-placeholder {
+  color: var(--rex-textarea-theme-active-placeholder, #606060);
+}
+.rex-textarea-ui.active.error::-webkit-input-placeholder,
+.rex-textarea-ui.focus.error::-webkit-input-placeholder,
+.rex-textarea-ui:active.error::-webkit-input-placeholder,
+.rex-textarea-ui:focus.error::-webkit-input-placeholder {
+  color: var(--rex-textarea-theme-error-placeholder, #717171);
+}
+.rex-textarea-ui.active.error:-moz-placeholder,
+.rex-textarea-ui.active.error::-moz-placeholder,
+.rex-textarea-ui.focus.error:-moz-placeholder,
+.rex-textarea-ui.focus.error::-moz-placeholder,
+.rex-textarea-ui:active.error:-moz-placeholder,
+.rex-textarea-ui:active.error::-moz-placeholder,
+.rex-textarea-ui:focus.error:-moz-placeholder,
+.rex-textarea-ui:focus.error::-moz-placeholder {
+  color: var(--rex-textarea-theme-error-placeholder, #717171);
+}
+.rex-textarea-ui.active.error:-ms-input-placeholder,
+.rex-textarea-ui.focus.error:-ms-input-placeholder,
+.rex-textarea-ui:active.error:-ms-input-placeholder,
+.rex-textarea-ui:focus.error:-ms-input-placeholder {
+  color: var(--rex-textarea-theme-error-placeholder, #717171);
+}
+.rex-textarea-ui.active.valid::-webkit-input-placeholder,
+.rex-textarea-ui.focus.valid::-webkit-input-placeholder,
+.rex-textarea-ui:active.valid::-webkit-input-placeholder,
+.rex-textarea-ui:focus.valid::-webkit-input-placeholder {
+  color: var(--rex-textarea-theme-valid-placeholder, #717171);
+}
+.rex-textarea-ui.active.valid:-moz-placeholder,
+.rex-textarea-ui.active.valid::-moz-placeholder,
+.rex-textarea-ui.focus.valid:-moz-placeholder,
+.rex-textarea-ui.focus.valid::-moz-placeholder,
+.rex-textarea-ui:active.valid:-moz-placeholder,
+.rex-textarea-ui:active.valid::-moz-placeholder,
+.rex-textarea-ui:focus.valid:-moz-placeholder,
+.rex-textarea-ui:focus.valid::-moz-placeholder {
+  color: var(--rex-textarea-theme-valid-placeholder, #717171);
+}
+.rex-textarea-ui.active.valid:-ms-input-placeholder,
+.rex-textarea-ui.focus.valid:-ms-input-placeholder,
+.rex-textarea-ui:active.valid:-ms-input-placeholder,
+.rex-textarea-ui:focus.valid:-ms-input-placeholder {
+  color: var(--rex-textarea-theme-valid-placeholder, #717171);
+}
+.rex-textarea-ui-border {
+  background-color: #fff;
+  border: 1px solid var(--rex-textarea-theme-border, #606060);
+  border-radius: 0.32rem;
+  padding: 0;
+  transition: border-color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+.rex-textarea-ui-border.hover {
+  border-color: var(--rex-textarea-theme-hover-border, #1364ff);
+}
+.rex-textarea-ui-border.disabled {
+  border-color: var(--rex-textarea-theme-disabled-border, #dfdfdf);
+}
+.rex-textarea-ui-border.disabled.active,
+.rex-textarea-ui-border.disabled.focus,
+.rex-textarea-ui-border.disabled:active,
+.rex-textarea-ui-border.disabled:focus {
+  background-color: #fff;
+  border-color: var(--rex-textarea-theme-disabled-border, #dfdfdf);
+}
+.rex-textarea-ui-border.disabled textarea.active,
+.rex-textarea-ui-border.disabled textarea.focus,
+.rex-textarea-ui-border.disabled textarea:active,
+.rex-textarea-ui-border.disabled textarea:focus {
+  border-color: transparent;
+}
+.rex-textarea-ui-border.disabled textarea::-webkit-input-placeholder {
+  color: var(--rex-textarea-theme-disabled-placeholder, #898989);
+}
+.rex-textarea-ui-border.disabled textarea:-moz-placeholder,
+.rex-textarea-ui-border.disabled textarea::-moz-placeholder {
+  color: var(--rex-textarea-theme-disabled-placeholder, #898989);
+}
+.rex-textarea-ui-border.disabled textarea:-ms-input-placeholder {
+  color: var(--rex-textarea-theme-disabled-placeholder, #898989);
+}
+.rex-textarea-ui-border.error:not(:active),
+.rex-textarea-ui-border.error:not(:focus) {
+  border-color: var(--rex-textarea-theme-error-border, #df0101);
+}
+.rex-textarea-ui-border.valid:not(:active),
+.rex-textarea-ui-border.valid:not(:focus) {
+  border-color: var(--rex-textarea-theme-valid-border, #047205);
+}
+.rex-textarea-ui-border.active:not(.disabled),
+.rex-textarea-ui-border.focus:not(.disabled),
+.rex-textarea-ui-border:active:not(.disabled),
+.rex-textarea-ui-border:focus:not(.disabled) {
+  background-color: var(--rex-textarea-theme-active-border, #1364ff);
+  border-color: var(--rex-textarea-theme-active-border, #1364ff);
+  outline: none;
+}
+.rex-textarea-ui-border.active.error,
+.rex-textarea-ui-border.focus.error,
+.rex-textarea-ui-border:active.error,
+.rex-textarea-ui-border:focus.error {
+  background-color: #fff;
+  border-color: var(--rex-textarea-theme-error-border, #df0101);
+}
+.rex-textarea-ui-border.active.valid,
+.rex-textarea-ui-border.focus.valid,
+.rex-textarea-ui-border:active.valid,
+.rex-textarea-ui-border:focus.valid {
+  background-color: #fff;
+  border-color: var(--rex-textarea-theme-valid-border, #047205);
+}
+.rex-textarea-label-ui {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  background-color: inherit;
+  color: var(--rex-textarea-label-theme-text, #606060);
+  display: block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 0.75rem;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  text-align: left;
+  transition: color 0.15s ease-in-out;
+}
+.rex-textarea-label-ui,
+.rex-textarea-label-ui:after,
+.rex-textarea-label-ui:before {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.rex-textarea-label-ui.hover {
+  color: var(--rex-textarea-label-theme-hover-text, #1364ff);
+}
+.rex-textarea-label-ui.disabled {
+  color: var(--rex-textarea-label-theme-disabled-text, #898989);
+}
+.rex-textarea-label-ui.error {
+  color: var(--rex-textarea-label-theme-error-text, #606060);
+}
+.rex-textarea-label-ui.valid {
+  color: var(--rex-textarea-label-theme-valid-text, #606060);
+}
+.rex-textarea-label-ui.active:not(.disabled):not(.valid):not(.error),
+.rex-textarea-label-ui.focus:not(.disabled):not(.valid):not(.error),
+.rex-textarea-label-ui:active:not(.disabled):not(.valid):not(.error),
+.rex-textarea-label-ui:focus:not(.disabled):not(.valid):not(.error) {
+  color: var(--rex-textarea-label-theme-active-text, #1364ff);
+  outline: none;
+}
+.rex-textarea-helper-ui {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  background-color: inherit;
+  color: var(--rex-textarea-helper-theme-text, #606060);
+  display: block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 0.75rem;
+  line-height: 1.5;
+  position: relative;
+  text-align: left;
+}
+.rex-textarea-helper-ui,
+.rex-textarea-helper-ui:after,
+.rex-textarea-helper-ui:before {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.rex-textarea-helper-ui.hover {
+  color: var(--rex-textarea-helper-theme-hover-text, #606060);
+}
+.rex-textarea-helper-ui.disabled:not(.active) {
+  color: var(--rex-textarea-helper-theme-disabled-text, #898989);
+}
+.rex-textarea-helper-ui.error {
+  align-items: center;
+  color: var(--rex-textarea-helper-theme-error-text, #df0101);
+  display: flex;
+}
+.rex-textarea-helper-ui.error svg {
+  font-size: 0.75rem;
+  margin-right: 0.25rem;
+}
+.rex-textarea-helper-ui.error svg path {
+  fill: var(--rex-textarea-helper-theme-error-text, #df0101);
+}
+.rex-textarea-helper-ui.valid {
+  align-items: center;
+  color: var(--rex-textarea-helper-theme-valid-text, #047205);
+  display: flex;
+}
+.rex-textarea-helper-ui.valid svg {
+  font-size: 0.75rem;
+  margin-right: 0.25rem;
+}
+.rex-textarea-helper-ui.valid svg path {
+  fill: var(--rex-textarea-helper-theme-valid-text, #047205);
+}
+.rex-textarea-helper-ui.active:not(.disabled):not(.error):not(.valid),
+.rex-textarea-helper-ui.focus:not(.disabled):not(.error):not(.valid),
+.rex-textarea-helper-ui:active:not(.disabled):not(.error):not(.valid),
+.rex-textarea-helper-ui:focus:not(.disabled):not(.error):not(.valid) {
+  color: var(--rex-textarea-helper-theme-active-text, #606060);
+  outline: none;
+}
+.rex-textarea-label-helper label {
+  margin-bottom: 0.25rem;
+  padding-left: 0.75rem;
+}
+.rex-textarea-label-helper small {
+  margin-top: 0.25rem;
+  padding-left: 0.75rem;
+}
+.rex-textarea-label-helper.hover
+  > div:not(.disabled):not(.error):not(.valid):not(.active),
+.rex-textarea-label-helper:hover
+  > div:not(.disabled):not(.error):not(.valid):not(.active) {
+  border-color: var(--rex-textarea-theme-hover-border, #1364ff);
+}
+.rex-textarea-label-helper.hover
+  > div:not(.disabled):not(.error):not(.valid):not(.active)
+  textarea,
+.rex-textarea-label-helper:hover
+  > div:not(.disabled):not(.error):not(.valid):not(.active)
+  textarea {
+  color: var(--rex-textarea-theme-hover-text, #333);
+}
+.rex-textarea-label-helper.hover
+  > div:not(.disabled):not(.error):not(.valid):not(.active)
+  textarea::-webkit-input-placeholder,
+.rex-textarea-label-helper:hover
+  > div:not(.disabled):not(.error):not(.valid):not(.active)
+  textarea::-webkit-input-placeholder {
+  color: var(--rex-textarea-theme-hover-placeholder, #717171);
+}
+.rex-textarea-label-helper.hover
+  > div:not(.disabled):not(.error):not(.valid):not(.active)
+  textarea:-moz-placeholder,
+.rex-textarea-label-helper.hover
+  > div:not(.disabled):not(.error):not(.valid):not(.active)
+  textarea::-moz-placeholder,
+.rex-textarea-label-helper:hover
+  > div:not(.disabled):not(.error):not(.valid):not(.active)
+  textarea:-moz-placeholder,
+.rex-textarea-label-helper:hover
+  > div:not(.disabled):not(.error):not(.valid):not(.active)
+  textarea::-moz-placeholder {
+  color: var(--rex-textarea-theme-hover-placeholder, #717171);
+}
+.rex-textarea-label-helper.hover
+  > div:not(.disabled):not(.error):not(.valid):not(.active)
+  textarea:-ms-input-placeholder,
+.rex-textarea-label-helper:hover
+  > div:not(.disabled):not(.error):not(.valid):not(.active)
+  textarea:-ms-input-placeholder {
+  color: var(--rex-textarea-theme-hover-placeholder, #717171);
+}
+.rex-textarea-label-helper.hover
+  label:not(.disabled):not(.error):not(.valid):not(.active),
+.rex-textarea-label-helper:hover
+  label:not(.disabled):not(.error):not(.valid):not(.active) {
+  color: var(--rex-textarea-label-theme-hover-text, #1364ff);
+}
+.rex-textarea-label-helper.hover
+  label:active
+  + div:not(.error):not(.valid):not(.disabled),
+.rex-textarea-label-helper:hover
+  label:active
+  + div:not(.error):not(.valid):not(.disabled) {
+  background-color: var(--rex-textarea-theme-hover-border, #1364ff);
+}
+.rex-textarea-label-helper.hover
+  small:not(.disabled):not(.error):not(.valid):not(.active),
+.rex-textarea-label-helper:hover
+  small:not(.disabled):not(.error):not(.valid):not(.active) {
+  color: var(--rex-textarea-helper-theme-hover-text, #606060);
+}
+
+/*!
+ * 
+ * @license @rakuten-rex/track v1.3.0 2020-07-02
+ * Track/Track.development.css
+ * 
+ * Copyright (c) 2018-present, Rakuten, Inc.
+ * 
+ * This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.
+ */
+.rex-track-item {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  background-color: inherit;
+  color: #333;
+  flex: 1;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1rem;
+  line-height: 1.5;
+  list-style-type: none;
+  position: relative;
+  text-align: left;
+}
+.rex-track-item,
+.rex-track-item:after,
+.rex-track-item:before {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.rex-track-item .rex-track-circle {
+  background-color: var(--rex-track-circle-background, transparent);
+  border-radius: 50%;
+  height: 1.5rem;
+  margin: 0 auto 1rem;
+  width: 1.5rem;
+}
+@media (max-width: 576px) {
+  .rex-track-item .rex-track-circle {
+    height: 1.25rem;
+    width: 1.25rem;
+  }
+}
+.rex-track-item .rex-track-circle:before {
+  background-color: var(--rex-track-circle-background, transparent);
+  border: 0.83333px solid var(--rex-track-line-color, #606060);
+  border-radius: 50%;
+  box-sizing: border-box;
+  content: " ";
+  display: block;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  position: absolute;
+  text-align: center;
+  width: 1.5rem;
+  z-index: 2;
+}
+@media (max-width: 576px) {
+  .rex-track-item .rex-track-circle:before {
+    height: 1.25rem;
+    line-height: 1.25rem;
+    width: 1.25rem;
+  }
+}
+.rex-track-item.visited .rex-track-line {
+  border-color: var(--rex-track-theme-color, #1364ff);
+}
+.rex-track-item.visited:first-of-type .rex-track-line {
+  border: none;
+}
+.rex-track-item.visited .rex-track-text {
+  color: var(--rex-track-theme-color, #1364ff);
+}
+.rex-track-item.visited .rex-track-circle:before {
+  background-color: var(--rex-track-theme-color, #1364ff);
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTIwIDdsLS44LS44LTEwIDEwLTQuMy00LjMtLjkuOCA1LjEgNS4xTDIwIDd6IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg==");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-color: var(--rex-track-theme-color, #1364ff);
+}
+.rex-track-item.current:first-child .rex-track-line {
+  border: none;
+}
+.rex-track-item.current .rex-track-line {
+  border-color: var(--rex-track-theme-color, #1364ff);
+}
+.rex-track-item.current .rex-track-circle:before {
+  background-color: var(--rex-track-circle-background, transparent);
+  border: 0.375rem solid var(--rex-track-theme-color, #1364ff);
+  border-radius: 50%;
+  box-sizing: border-box;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+@media (max-width: 576px) {
+  .rex-track-item.current .rex-track-circle:before {
+    height: 1.25rem;
+    line-height: 1.25rem;
+    width: 1.25rem;
+  }
+}
+.rex-track-item.current .rex-track-text {
+  color: var(--rex-track-theme-color, #1364ff);
+}
+.rex-track-item .rex-track-line {
+  border: 1px solid var(--rex-track-line-color, #606060);
+  flex: 1 1 auto;
+  left: calc(-50% + 28px);
+  position: absolute;
+  right: calc(50% + 28px);
+  top: 12px;
+}
+@media (max-width: 576px) {
+  .rex-track-item .rex-track-line {
+    left: calc(-50% + 20px);
+    right: calc(50% + 20px);
+    top: 9px;
+  }
+}
+.rex-track-item .rex-track-text {
+  color: var(--rex-track-text-color, #606060);
+  display: block;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  text-align: center;
+}
+@media (max-width: 576px) {
+  .rex-track-item .rex-track-text {
+    height: 0;
+    visibility: hidden;
+    width: 0;
+  }
+}
+.rex-track {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  align-items: flex-start;
+  background-color: inherit;
+  color: #333;
+  counter-reset: step;
+  display: flex;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1rem;
+  justify-content: space-between;
+  line-height: 1.5;
+  margin-block-end: 0;
+  margin-block-start: 0;
+  padding-inline-start: 0;
+  text-align: left;
+}
+.rex-track,
+.rex-track:after,
+.rex-track:before {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.rex-track .list-unstyled {
+  list-style: none;
+  padding-left: 0;
+}
+.rex-track .list-unstyled ol,
+.rex-track .list-unstyled ul {
+  list-style: none;
+}
+.rex-track .rex-track-item {
+  width: 100%;
+}
+
+/*!
+ * 
+ * @license @rakuten-rex/typography v1.0.5 2020-09-11
+ * BodyText1/BodyText1.development.css
+ * 
+ * Copyright (c) 2018-present, Rakuten, Inc.
+ * 
+ * This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.
+ */
+.rex-typography-body-text1 {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  background-color: inherit;
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1rem;
+  font-style: normal;
+  line-height: 1.5;
+  text-align: left;
+}
+.rex-typography-body-text1,
+.rex-typography-body-text1:after,
+.rex-typography-body-text1:before {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.rex-typography-body-text1.rex-typography-margin-reset {
+  margin: 0;
+}
+.rex-typography-body-text1.rex-typography-margin-bottom {
+  margin: 0 0 0.35em;
+}
+.rex-typography-body-text1.rex-typography-weight-thin {
+  font-weight: 100;
+}
+.rex-typography-body-text1.rex-typography-weight-light {
+  font-weight: 300;
+}
+.rex-typography-body-text1.rex-typography-weight-regular {
+  font-weight: 400;
+}
+.rex-typography-body-text1.rex-typography-weight-medium {
+  font-weight: 500;
+}
+.rex-typography-body-text1.rex-typography-weight-bold {
+  font-weight: 700;
+}
+
+/*!
+ * 
+ * @license @rakuten-rex/typography v1.0.5 2020-09-11
+ * BodyText2/BodyText2.development.css
+ * 
+ * Copyright (c) 2018-present, Rakuten, Inc.
+ * 
+ * This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.
+ */
+.rex-typography-body-text2 {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  background-color: inherit;
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 0.875rem;
+  font-style: normal;
+  line-height: 1.429;
+  text-align: left;
+}
+.rex-typography-body-text2,
+.rex-typography-body-text2:after,
+.rex-typography-body-text2:before {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.rex-typography-body-text2.rex-typography-margin-reset {
+  margin: 0;
+}
+.rex-typography-body-text2.rex-typography-margin-bottom {
+  margin: 0 0 0.35em;
+}
+.rex-typography-body-text2.rex-typography-weight-thin {
+  font-weight: 100;
+}
+.rex-typography-body-text2.rex-typography-weight-light {
+  font-weight: 300;
+}
+.rex-typography-body-text2.rex-typography-weight-regular {
+  font-weight: 400;
+}
+.rex-typography-body-text2.rex-typography-weight-medium {
+  font-weight: 500;
+}
+.rex-typography-body-text2.rex-typography-weight-bold {
+  font-weight: 700;
+}
+
+/*!
+ * 
+ * @license @rakuten-rex/typography v1.0.5 2020-09-11
+ * Caption/Caption.development.css
+ * 
+ * Copyright (c) 2018-present, Rakuten, Inc.
+ * 
+ * This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.
+ */
+.rex-typography-body-caption {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  background-color: inherit;
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 0.75rem;
+  font-style: normal;
+  line-height: 1.333;
+  text-align: left;
+}
+.rex-typography-body-caption,
+.rex-typography-body-caption:after,
+.rex-typography-body-caption:before {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.rex-typography-body-caption.rex-typography-margin-reset {
+  margin: 0;
+}
+.rex-typography-body-caption.rex-typography-margin-bottom {
+  margin: 0 0 0.35em;
+}
+.rex-typography-body-caption.rex-typography-weight-thin {
+  font-weight: 100;
+}
+.rex-typography-body-caption.rex-typography-weight-light {
+  font-weight: 300;
+}
+.rex-typography-body-caption.rex-typography-weight-regular {
+  font-weight: 400;
+}
+.rex-typography-body-caption.rex-typography-weight-medium {
+  font-weight: 500;
+}
+.rex-typography-body-caption.rex-typography-weight-bold {
+  font-weight: 700;
+}
+
+/*!
+ * 
+ * @license @rakuten-rex/typography v1.0.5 2020-09-11
+ * Display1/Display1.development.css
+ * 
+ * Copyright (c) 2018-present, Rakuten, Inc.
+ * 
+ * This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.
+ */
+.rex-typography-display1 {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  background-color: inherit;
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 2.875rem;
+  font-style: normal;
+  line-height: 1.391;
+  text-align: left;
+}
+.rex-typography-display1,
+.rex-typography-display1:after,
+.rex-typography-display1:before {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.rex-typography-display1.rex-typography-margin-reset {
+  margin: 0;
+}
+.rex-typography-display1.rex-typography-margin-bottom {
+  margin: 0 0 0.35em;
+}
+.rex-typography-display1.rex-typography-weight-thin {
+  font-weight: 100;
+}
+.rex-typography-display1.rex-typography-weight-light {
+  font-weight: 300;
+}
+.rex-typography-display1.rex-typography-weight-regular {
+  font-weight: 400;
+}
+.rex-typography-display1.rex-typography-weight-medium {
+  font-weight: 500;
+}
+.rex-typography-display1.rex-typography-weight-bold {
+  font-weight: 700;
+}
+@media (max-width: 25.875em) {
+  .rex-typography-display1 {
+    font-size: 2.25rem;
+  }
+  .rex-typography-display1:lang(en) {
+    line-height: 1.444;
+  }
+  .rex-typography-display1:lang(ja) {
+    line-height: 1.333;
+  }
+}
+
+/*!
+ * 
+ * @license @rakuten-rex/typography v1.0.5 2020-09-11
+ * Display2/Display2.development.css
+ * 
+ * Copyright (c) 2018-present, Rakuten, Inc.
+ * 
+ * This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.
+ */
+.rex-typography-display2 {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  background-color: inherit;
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 2.5rem;
+  font-style: normal;
+  line-height: 1.4;
+  text-align: left;
+}
+.rex-typography-display2,
+.rex-typography-display2:after,
+.rex-typography-display2:before {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.rex-typography-display2.rex-typography-margin-reset {
+  margin: 0;
+}
+.rex-typography-display2.rex-typography-margin-bottom {
+  margin: 0 0 0.35em;
+}
+.rex-typography-display2.rex-typography-weight-thin {
+  font-weight: 100;
+}
+.rex-typography-display2.rex-typography-weight-light {
+  font-weight: 300;
+}
+.rex-typography-display2.rex-typography-weight-regular {
+  font-weight: 400;
+}
+.rex-typography-display2.rex-typography-weight-medium {
+  font-weight: 500;
+}
+.rex-typography-display2.rex-typography-weight-bold {
+  font-weight: 700;
+}
+@media (max-width: 25.875em) {
+  .rex-typography-display2 {
+    font-size: 2rem;
+    line-height: 1.375;
+  }
+}
+
+/*!
+ * 
+ * @license @rakuten-rex/typography v1.0.5 2020-09-11
+ * Display3/Display3.development.css
+ * 
+ * Copyright (c) 2018-present, Rakuten, Inc.
+ * 
+ * This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.
+ */
+.rex-typography-display3 {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  background-color: inherit;
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 2.25rem;
+  font-style: normal;
+  line-height: 1.5;
+  text-align: left;
+}
+.rex-typography-display3,
+.rex-typography-display3:after,
+.rex-typography-display3:before {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.rex-typography-display3.rex-typography-margin-reset {
+  margin: 0;
+}
+.rex-typography-display3.rex-typography-margin-bottom {
+  margin: 0 0 0.35em;
+}
+.rex-typography-display3.rex-typography-weight-thin {
+  font-weight: 100;
+}
+.rex-typography-display3.rex-typography-weight-light {
+  font-weight: 300;
+}
+.rex-typography-display3.rex-typography-weight-regular {
+  font-weight: 400;
+}
+.rex-typography-display3.rex-typography-weight-medium {
+  font-weight: 500;
+}
+.rex-typography-display3.rex-typography-weight-bold {
+  font-weight: 700;
+}
+.rex-typography-display3:lang(en) {
+  line-height: 1.444;
+}
+.rex-typography-display3:lang(ja) {
+  line-height: 1.333;
+}
+@media (max-width: 25.875em) {
+  .rex-typography-display3 {
+    font-size: 1.75rem;
+    line-height: 1.429;
+  }
+}
+
+/*!
+ * 
+ * @license @rakuten-rex/typography v1.0.5 2020-09-11
+ * Display4/Display4.development.css
+ * 
+ * Copyright (c) 2018-present, Rakuten, Inc.
+ * 
+ * This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.
+ */
+.rex-typography-display4 {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  background-color: inherit;
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 2rem;
+  font-style: normal;
+  line-height: 1.375;
+  text-align: left;
+}
+.rex-typography-display4,
+.rex-typography-display4:after,
+.rex-typography-display4:before {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.rex-typography-display4.rex-typography-margin-reset {
+  margin: 0;
+}
+.rex-typography-display4.rex-typography-margin-bottom {
+  margin: 0 0 0.35em;
+}
+.rex-typography-display4.rex-typography-weight-thin {
+  font-weight: 100;
+}
+.rex-typography-display4.rex-typography-weight-light {
+  font-weight: 300;
+}
+.rex-typography-display4.rex-typography-weight-regular {
+  font-weight: 400;
+}
+.rex-typography-display4.rex-typography-weight-medium {
+  font-weight: 500;
+}
+.rex-typography-display4.rex-typography-weight-bold {
+  font-weight: 700;
+}
+@media (max-width: 25.875em) {
+  .rex-typography-display4 {
+    font-size: 1.5rem;
+    line-height: 1.333;
+  }
+}
+
+/*!
+ * 
+ * @license @rakuten-rex/typography v1.0.5 2020-09-11
+ * Display5/Display5.development.css
+ * 
+ * Copyright (c) 2018-present, Rakuten, Inc.
+ * 
+ * This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.
+ */
+.rex-typography-display5 {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  background-color: inherit;
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1.75rem;
+  font-style: normal;
+  line-height: 1.429;
+  text-align: left;
+}
+.rex-typography-display5,
+.rex-typography-display5:after,
+.rex-typography-display5:before {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.rex-typography-display5.rex-typography-margin-reset {
+  margin: 0;
+}
+.rex-typography-display5.rex-typography-margin-bottom {
+  margin: 0 0 0.35em;
+}
+.rex-typography-display5.rex-typography-weight-thin {
+  font-weight: 100;
+}
+.rex-typography-display5.rex-typography-weight-light {
+  font-weight: 300;
+}
+.rex-typography-display5.rex-typography-weight-regular {
+  font-weight: 400;
+}
+.rex-typography-display5.rex-typography-weight-medium {
+  font-weight: 500;
+}
+.rex-typography-display5.rex-typography-weight-bold {
+  font-weight: 700;
+}
+
+/*!
+ * 
+ * @license @rakuten-rex/typography v1.0.5 2020-09-11
+ * H1/H1.development.css
+ * 
+ * Copyright (c) 2018-present, Rakuten, Inc.
+ * 
+ * This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.
+ */
+.rex-typography-h1 {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  background-color: inherit;
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1.5rem;
+  font-style: normal;
+  line-height: 1.5;
+  text-align: left;
+}
+.rex-typography-h1,
+.rex-typography-h1:after,
+.rex-typography-h1:before {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.rex-typography-h1.rex-typography-margin-reset {
+  margin: 0;
+}
+.rex-typography-h1.rex-typography-margin-bottom {
+  margin: 0 0 0.35em;
+}
+.rex-typography-h1.rex-typography-weight-thin {
+  font-weight: 100;
+}
+.rex-typography-h1.rex-typography-weight-light {
+  font-weight: 300;
+}
+.rex-typography-h1.rex-typography-weight-regular {
+  font-weight: 400;
+}
+.rex-typography-h1.rex-typography-weight-medium {
+  font-weight: 500;
+}
+.rex-typography-h1.rex-typography-weight-bold {
+  font-weight: 700;
+}
+@media (max-width: 25.875em) {
+  .rex-typography-h1 {
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+}
+
+/*!
+ * 
+ * @license @rakuten-rex/typography v1.0.5 2020-09-11
+ * H2/H2.development.css
+ * 
+ * Copyright (c) 2018-present, Rakuten, Inc.
+ * 
+ * This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.
+ */
+.rex-typography-h2 {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  background-color: inherit;
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1.25rem;
+  font-style: normal;
+  line-height: 1.4;
+  text-align: left;
+}
+.rex-typography-h2,
+.rex-typography-h2:after,
+.rex-typography-h2:before {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.rex-typography-h2.rex-typography-margin-reset {
+  margin: 0;
+}
+.rex-typography-h2.rex-typography-margin-bottom {
+  margin: 0 0 0.35em;
+}
+.rex-typography-h2.rex-typography-weight-thin {
+  font-weight: 100;
+}
+.rex-typography-h2.rex-typography-weight-light {
+  font-weight: 300;
+}
+.rex-typography-h2.rex-typography-weight-regular {
+  font-weight: 400;
+}
+.rex-typography-h2.rex-typography-weight-medium {
+  font-weight: 500;
+}
+.rex-typography-h2.rex-typography-weight-bold {
+  font-weight: 700;
+}
+@media (max-width: 25.875em) {
+  .rex-typography-h2 {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
+
+/*!
+ * 
+ * @license @rakuten-rex/typography v1.0.5 2020-09-11
+ * H3/H3.development.css
+ * 
+ * Copyright (c) 2018-present, Rakuten, Inc.
+ * 
+ * This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.
+ */
+.rex-typography-h3 {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  background-color: inherit;
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1rem;
+  font-style: normal;
+  line-height: 1.5;
+  text-align: left;
+}
+.rex-typography-h3,
+.rex-typography-h3:after,
+.rex-typography-h3:before {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.rex-typography-h3.rex-typography-margin-reset {
+  margin: 0;
+}
+.rex-typography-h3.rex-typography-margin-bottom {
+  margin: 0 0 0.35em;
+}
+.rex-typography-h3.rex-typography-weight-thin {
+  font-weight: 100;
+}
+.rex-typography-h3.rex-typography-weight-light {
+  font-weight: 300;
+}
+.rex-typography-h3.rex-typography-weight-regular {
+  font-weight: 400;
+}
+.rex-typography-h3.rex-typography-weight-medium {
+  font-weight: 500;
+}
+.rex-typography-h3.rex-typography-weight-bold {
+  font-weight: 700;
+}
+@media (max-width: 25.875em) {
+  .rex-typography-h3 {
+    font-size: 0.875rem;
+    line-height: 1.429;
+  }
+}
+
+/*!
+ * 
+ * @license @rakuten-rex/typography v1.0.5 2020-09-11
+ * H4/H4.development.css
+ * 
+ * Copyright (c) 2018-present, Rakuten, Inc.
+ * 
+ * This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.
+ */
+.rex-typography-h4 {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  background-color: inherit;
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 0.875rem;
+  font-style: normal;
+  line-height: 1.429;
+  text-align: left;
+}
+.rex-typography-h4,
+.rex-typography-h4:after,
+.rex-typography-h4:before {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.rex-typography-h4.rex-typography-margin-reset {
+  margin: 0;
+}
+.rex-typography-h4.rex-typography-margin-bottom {
+  margin: 0 0 0.35em;
+}
+.rex-typography-h4.rex-typography-weight-thin {
+  font-weight: 100;
+}
+.rex-typography-h4.rex-typography-weight-light {
+  font-weight: 300;
+}
+.rex-typography-h4.rex-typography-weight-regular {
+  font-weight: 400;
+}
+.rex-typography-h4.rex-typography-weight-medium {
+  font-weight: 500;
+}
+.rex-typography-h4.rex-typography-weight-bold {
+  font-weight: 700;
+}
+@media (max-width: 25.875em) {
+  .rex-typography-h4 {
+    font-size: 0.75rem;
+    line-height: 1.333;
+  }
+}
+
+/*!
+ * 
+ * @license @rakuten-rex/typography v1.0.5 2020-09-11
+ * H5/H5.development.css
+ * 
+ * Copyright (c) 2018-present, Rakuten, Inc.
+ * 
+ * This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.
+ */
+.rex-typography-h5 {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  background-color: inherit;
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 0.75rem;
+  font-style: normal;
+  line-height: 1.333;
+  text-align: left;
+}
+.rex-typography-h5,
+.rex-typography-h5:after,
+.rex-typography-h5:before {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.rex-typography-h5.rex-typography-margin-reset {
+  margin: 0;
+}
+.rex-typography-h5.rex-typography-margin-bottom {
+  margin: 0 0 0.35em;
+}
+.rex-typography-h5.rex-typography-weight-thin {
+  font-weight: 100;
+}
+.rex-typography-h5.rex-typography-weight-light {
+  font-weight: 300;
+}
+.rex-typography-h5.rex-typography-weight-regular {
+  font-weight: 400;
+}
+.rex-typography-h5.rex-typography-weight-medium {
+  font-weight: 500;
+}
+.rex-typography-h5.rex-typography-weight-bold {
+  font-weight: 700;
+}
+@media (max-width: 25.875em) {
+  .rex-typography-h5 {
+    font-size: 0.625rem;
+    line-height: 1.6;
+  }
+}
+
+/*!
+ * 
+ * @license @rakuten-rex/typography v1.0.5 2020-09-11
+ * H6/H6.development.css
+ * 
+ * Copyright (c) 2018-present, Rakuten, Inc.
+ * 
+ * This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.
+ */
+.rex-typography-h6 {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  background-color: inherit;
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 0.75rem;
+  font-style: normal;
+  line-height: 1.333;
+  text-align: left;
+}
+.rex-typography-h6,
+.rex-typography-h6:after,
+.rex-typography-h6:before {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.rex-typography-h6.rex-typography-margin-reset {
+  margin: 0;
+}
+.rex-typography-h6.rex-typography-margin-bottom {
+  margin: 0 0 0.35em;
+}
+.rex-typography-h6.rex-typography-weight-thin {
+  font-weight: 100;
+}
+.rex-typography-h6.rex-typography-weight-light {
+  font-weight: 300;
+}
+.rex-typography-h6.rex-typography-weight-regular {
+  font-weight: 400;
+}
+.rex-typography-h6.rex-typography-weight-medium {
+  font-weight: 500;
+}
+.rex-typography-h6.rex-typography-weight-bold {
+  font-weight: 700;
+}
+@media (max-width: 25.875em) {
+  .rex-typography-h6 {
+    font-size: 0.625rem;
+    line-height: 1.6;
+  }
+}
+
+/*!
+ * 
+ * @license @rakuten-rex/typography v1.0.5 2020-09-11
+ * LeadBodyText/LeadBodyText.development.css
+ * 
+ * Copyright (c) 2018-present, Rakuten, Inc.
+ * 
+ * This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.
+ */
+.rex-typography-lead-body-text {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  background-color: inherit;
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1.25rem;
+  font-style: normal;
+  line-height: 1.4;
+  text-align: left;
+}
+.rex-typography-lead-body-text,
+.rex-typography-lead-body-text:after,
+.rex-typography-lead-body-text:before {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.rex-typography-lead-body-text.rex-typography-margin-reset {
+  margin: 0;
+}
+.rex-typography-lead-body-text.rex-typography-margin-bottom {
+  margin: 0 0 0.35em;
+}
+.rex-typography-lead-body-text.rex-typography-weight-thin {
+  font-weight: 100;
+}
+.rex-typography-lead-body-text.rex-typography-weight-light {
+  font-weight: 300;
+}
+.rex-typography-lead-body-text.rex-typography-weight-regular {
+  font-weight: 400;
+}
+.rex-typography-lead-body-text.rex-typography-weight-medium {
+  font-weight: 500;
+}
+.rex-typography-lead-body-text.rex-typography-weight-bold {
+  font-weight: 700;
+}
+
+/*!
+ * 
+ * @license @rakuten-rex/typography v1.0.5 2020-09-11
+ * Overline/Overline.development.css
+ * 
+ * Copyright (c) 2018-present, Rakuten, Inc.
+ * 
+ * This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.
+ */
+.rex-typography-body-overline {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  background-color: inherit;
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 0.625rem;
+  font-style: normal;
+  line-height: 1.6;
+  text-align: left;
+}
+.rex-typography-body-overline,
+.rex-typography-body-overline:after,
+.rex-typography-body-overline:before {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.rex-typography-body-overline.rex-typography-margin-reset {
+  margin: 0;
+}
+.rex-typography-body-overline.rex-typography-margin-bottom {
+  margin: 0 0 0.35em;
+}
+.rex-typography-body-overline.rex-typography-weight-thin {
+  font-weight: 100;
+}
+.rex-typography-body-overline.rex-typography-weight-light {
+  font-weight: 300;
+}
+.rex-typography-body-overline.rex-typography-weight-regular {
+  font-weight: 400;
+}
+.rex-typography-body-overline.rex-typography-weight-medium {
+  font-weight: 500;
+}
+.rex-typography-body-overline.rex-typography-weight-bold {
+  font-weight: 700;
+}
+
+
