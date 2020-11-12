@@ -1,0 +1,114 @@
+/*!
+ * 
+ * @license @rakuten-rex/switch v1.5.0 2020-07-16
+ * SwitchToggle/SwitchToggle.development.css
+ * 
+ * Copyright (c) 2018-present, Rakuten, Inc.
+ * 
+ * This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.
+ */
+.rex-switch {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  background-color: inherit;
+  color: #333;
+  display: block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: var(--rex-switch-margin-top, 0) var(--rex-switch-margin-right, 0)
+    var(--rex-switch-margin-bottom, 0.5rem) var(--rex-switch-margin-left, 0);
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+}
+.rex-switch,
+.rex-switch:after,
+.rex-switch:before {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.rex-switch input {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+}
+.rex-switch-label {
+  color: var(--rex-switch-label, #606060);
+  font-size: 1rem;
+  line-height: 22px;
+  vertical-align: top;
+}
+.rex-switch-label.label-left {
+  margin-right: var(--rex-switch-label-margin-right, 0.5rem);
+}
+.rex-switch-label.label-right {
+  margin-left: var(--rex-switch-label-margin-left, 0.5rem);
+}
+.rex-switch.checked .rex-switch-label {
+  color: var(--rex-switch-checked-label, #333);
+}
+.rex-switch.disabled .rex-switch-label {
+  color: var(--rex-switch-disabled-label, #898989);
+}
+.rex-switch-container {
+  display: inline-block;
+  height: 22px;
+  position: relative;
+  width: 42px;
+}
+.rex-switch-container input[type="checkbox"] {
+  cursor: pointer;
+  height: 100%;
+  opacity: 0;
+  width: 100%;
+}
+.rex-switch-container input[type="checkbox"]:checked + .rex-switch-knob {
+  background-color: var(--rex-switch-theme, #1364ff);
+}
+.rex-switch-container input[type="checkbox"]:checked + .rex-switch-knob:before {
+  -ms-transform: translateX(20px);
+  -webkit-transform: translateX(20px);
+  transform: translateX(20px);
+}
+.rex-switch-container input[type="checkbox"]:disabled + .rex-switch-knob {
+  background: var(--rex-switch-disabled-background, #dfdfdf);
+  cursor: auto;
+  pointer-events: none;
+}
+.rex-switch-container input[type="checkbox"] + .rex-switch-knob {
+  background-color: var(--rex-switch-default, #828282);
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+.rex-switch-container input[type="checkbox"] + .rex-switch-knob,
+.rex-switch-container input[type="checkbox"] + .rex-switch-knob:before {
+  -webkit-transition: left 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    -webkit-transform 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-radius: 0.25rem;
+  position: absolute;
+  transition: left 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    transform 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+.rex-switch-container input[type="checkbox"] + .rex-switch-knob:before {
+  background-color: var(--rex-switch-knob, #fff);
+  bottom: 2px;
+  content: "";
+  height: 18px;
+  left: 2px;
+  width: 18px;
+}
+
+
