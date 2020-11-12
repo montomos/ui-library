@@ -5,11 +5,10 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   mode: "development",
-  entry: ["./src/index.js", "./src/scss/style.scss"],
+  entry: ["./src/index.js"],
   output: {
-    // filename: "main.js",
     filename: "index.js",
-    path: path.resolve(__dirname, "./dist/"),
+    path: path.resolve(__dirname, "./docs/"),
   },
   optimization: {
     minimize: false,
@@ -24,7 +23,7 @@ module.exports = {
         {
           context: "./src/img",
           from: path.resolve(__dirname, "./src/img/"),
-          to: path.resolve(__dirname, "dist/img/"),
+          to: path.resolve(__dirname, "docs/img/"),
           force: true,
           flatten: true,
         },
@@ -52,7 +51,7 @@ module.exports = {
     }),
   ],
   devServer: {
-    contentBase: path.join(__dirname, "dist"),
+    contentBase: path.join(__dirname, "docs"),
     watchContentBase: true,
     index: "index.html",
     open: true,
@@ -109,7 +108,7 @@ module.exports = {
           options: {
             name: "[name].[ext]",
             context: path.resolve(__dirname, "src/img/"),
-            outputPath: "dist/",
+            outputPath: "docs/",
           },
         },
       },
