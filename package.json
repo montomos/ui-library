@@ -29,6 +29,8 @@
   "dependencies": {
     "@rakuten-rex/button": "^1.5.0",
     "@rakuten-rex/checkbox": "^1.4.0",
+    "@rakuten-rex/grid": "^1.6.0",
+    "@rakuten-rex/panel": "^1.2.0",
     "@rakuten-rex/radio-button": "^1.4.0",
     "@rakuten-rex/select": "^1.4.1",
     "@rakuten-rex/stepper": "^1.6.0",
