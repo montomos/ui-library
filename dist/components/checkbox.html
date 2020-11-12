@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+  <meta charset="utf-8">
+  <title>Checkbox</title>
+  <meta Checkbox="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <link rel="stylesheet" href="../css/main.production.min.css">
+</head>
+
+<body>
+  <h1>Checkbox</h1>
+  <div>
+    <h3>Default</h3>
+    <div class="rex-checkbox"><input type="checkbox" id="pet-dog" value="dog" name="pet" /><label
+        class="rex-checkbox-label" for="pet-dog">dog</label></div>
+
+    <h3>Disabled State</h3>
+    <div class="rex-checkbox"><input type="checkbox" id="choice-ferret" value="ferret" name="pet" disabled="" /><label
+        class="rex-checkbox-label" for="choice-ferret">ferret</label></div>
+
+    <h3>Layout Block</h3>
+    <div class="rex-checkbox rex-form-block"><input type="checkbox" id="animal-choice1" value="dog" name="pet"
+        checked="" /><label class="rex-checkbox-label" for="animal-choice1">dog</label></div>
+    <div class="rex-checkbox rex-form-block"><input type="checkbox" id="animal-choice2" value="cat" name="pet" /><label
+        class="rex-checkbox-label" for="animal-choice2">cat</label></div>
+    <div class="rex-checkbox rex-form-block"><input type="checkbox" id="animal-choice3" value="rabbit"
+        name="pet" /><label class="rex-checkbox-label" for="animal-choice3">rabbit</label></div>
+    <div class="rex-checkbox rex-form-block"><input type="checkbox" id="animal-choice4" value="pig" name="pet"
+        disabled="" /><label class="rex-checkbox-label" for="animal-choice4">pig</label></div>
+
+    <h3>Multiple checkboxes</h3>
+    <div class="rex-checkbox"><input type="checkbox" id="choice1" value="dog" name="pet" checked="" /><label
+        class="rex-checkbox-label" for="choice1">Dog</label></div>
+    <div class="rex-checkbox"><input type="checkbox" id="choice2" value="fish" name="pet" /><label
+        class="rex-checkbox-label" for="choice2">Fish</label></div>
+    <div class="rex-checkbox"><input type="checkbox" id="choice3" value="cat" name="pet" /><label
+        class="rex-checkbox-label" for="choice3">Cat</label></div>
+    <div class="rex-checkbox"><input type="checkbox" id="choice4" value="llama" name="pet" /><label
+        class="rex-checkbox-label" for="choice4">Llama</label></div>
+    <div class="rex-checkbox"><input type="checkbox" id="choice5" value="iguana" name="pet" disabled="" /><label
+        class="rex-checkbox-label" for="choice5">Iguana</label></div>
+
+    <h3>Theme</h3>
+    <style>
+      .rex-checkbox-custom-style {
+        --rex-checkbox-theme: #CB0085;
+        --rex-checkbox-border: #830056;
+        --rex-checkbox-label: #A2006A;
+        --rex-checkbox-checked-label: #5A003C;
+        --rex-checkbox-checked-border: #CB0085;
+        --rex-checkbox-disabled-label: #828282;
+        --rex-checkbox-disabled-border: #686868;
+        --rex-checkbox-margin-top: 0.5rem;
+        --rex-checkbox-margin-right: 3rem;
+        --rex-checkbox-margin-bottom: 0.5rem;
+        --rex-checkbox-margin-left: 0rem;
+      }
+    </style>
+
+    <div class="rex-checkbox rex-checkbox-custom-style">
+      <input id="theme-default" name="pet" type="checkbox" value="rabbit">
+      <label class="rex-checkbox-label" for="theme-default">rabbit</label>
+    </div>
+
+    <script src="../index.js"></script>
+</body>
+
+</html>
